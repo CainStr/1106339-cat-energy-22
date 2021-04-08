@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Кэт энерджи</title>
+  <title>Анкета для подбора питания вашему питомцу: интернет-магазин «Cat-energy»</title>
 </head>
 
 <body class="main">
@@ -29,57 +29,88 @@
     <p class="person-parameters__subtitle">Заполните анкету, и мы поберем программу питания для вашего кота</p>
     <form class="person-parameters__form" method="post" action="https://echo.htmlacademy.ru">
       <fieldset class="person-parameters__item">
-        <label class="person-parameters__name">имя:*
-          <input value="БАРСИК" type="text" name="cat-name">
-        </label>
-        <label class="person-parameters__weight">вес (кг):*
-          <input value="7" type="text" name="cat-weight">
-        </label>
-        <label class="person-parameters__age">возраст (лет):
-          <input value="7" type="text" name="cat-age">
-        </label>
+        <ul class="person-parameters__item-list">
+          <li>
+            <label class="person-parameters__name">имя:*
+              <input type="text" name="cat-name" placeholder="БАРСИК">
+            </label>
+          </li>
+          <li>
+            <label class="person-parameters__weight">вес (кг):*
+              <input type="text" name="cat-weight" placeholder="7">
+            </label>
+          </li>
+          <li>
+            <label class="person-parameters__age">возраст (лет):
+              <input type="text" name="cat-age" placeholder="7">
+            </label>
+          </li>
+        </ul>
       </fieldset>
 
       <fieldset class="person-parameters__purpose">
-        <input type="radio" value="похудение" name="weight-loss" id="weight-loss" checked>
-        <label for="weight-loss">похудение
-        </label>
-        <input type="radio" value="набор массы" name="weight-gain" id="weight-gain">
-        <label for="weight-gain">набор массы
-        </label>
-        <input type="radio" value="не знаю (нужен ваш совет)" name="need-some-advice" id="need-some-advice">
-        <label for="need-some-advice">не знаю (нужен ваш совет)</label>
+        <ul class="person-parameters__purpose-list">
+          <li>
+            <input type="radio" value="weight-loss" name="radio-mass" id="weight-loss" checked>
+            <label for="weight-loss">похудение
+            </label>
+          </li>
+          <li>
+            <input type="radio" value="weight-gain" name="radio-mass" id="weight-gain">
+            <label for="weight-gain">набор массы
+            </label>
+          </li>
+          <li>
+            <input type="radio" value="need-some-advice" name="radio-mass" id="need-some-advice">
+            <label for="need-some-advice">не знаю (нужен ваш совет)</label>
+          </li>
+        </ul>
       </fieldset>
 
       <fieldset class="person-parameters__contacts">
         <legend class="person-parameters__optional-title"> Контактные данные (владелец кота)</legend>
-        <label class="person-parameters__email">E-mail:*
-          <input type="email" name="person-email" value="kuklachev@gmail.com">
-        </label>
-        <label class="person-parameters__telephone">Телефон:*
-          <input type="tel" name="person-telephone" value="8 (960) 900-60-90">
-        </label>
-        <label class="person-parameters__optional-title" for="person-parameters__comment">Комментарий</label>
-        <textarea class="person-parameters__comment" name="person-parameters__comment" placeholder="Расскажите обо всех повадках кота" id="person-parameters__comment"></textarea>
+        <ul class="person-parameters__contacts-list">
+          <li>
+            <label class="person-parameters__email">E-mail:*
+              <input type="email" name="person-email" placeholder="kuklachev@gmail.com">
+            </label>
+          </li>
+          <li>
+            <label class="person-parameters__telephone">Телефон:*
+              <input type="tel" name="person-telephone" placeholder="8 (960) 900-60-90">
+            </label>
+          </li>
+          <li>
+            <label class="person-parameters__optional-title" for="person-parameters__comment">Комментарий</label>
+            <textarea class="person-parameters__comment" name="person-parameters__comment" placeholder="Расскажите обо всех повадках кота" id="person-parameters__comment"></textarea>
+          </li>
+        </ul>
       </fieldset>
 
       <fieldset class="person-parameters__optional">
         <legend class="person-parameters__optional-title">Дополнительно</legend>
-        <input type="checkbox" name="sweetener" id="sweetener" checked>
-        <label for="sweetener">сахарозаменитель</label>
-
-        <input type="checkbox" name="drinking-water" id="drinking-water">
-        <label for="drinking-water">питьевая вода</label>
-
-        <input type="checkbox" name="milk" id="milk">
-        <label for="milk">молоко</label>
-
-        <input type="checkbox" name="vitamins" id="vitamins">
-        <label for="vitamins">витамины</label>
-
-        <button type="submit" value="Данные владельца и его питомца">отправить форму</button>
-        <p>* — Обязательные поля</p>
+        <ul>
+          <li>
+            <input type="checkbox" name="sweetener" id="sweetener" checked>
+            <label for="sweetener">сахарозаменитель</label>
+          </li>
+          <li>
+            <input type="checkbox" name="drinking-water" id="drinking-water">
+            <label for="drinking-water">питьевая вода</label>
+          </li>
+          <li>
+            <input type="checkbox" name="milk" id="milk">
+            <label for="milk">молоко</label>
+          </li>
+          <li>
+            <input type="checkbox" name="vitamins" id="vitamins">
+            <label for="vitamins">витамины</label>
+          </li>
+        </ul>
       </fieldset>
+
+      <button type="submit" value="Данные владельца и его питомца">отправить форму</button>
+      <p>* — Обязательные поля</p>
     </form>
   </section>
 
@@ -98,15 +129,15 @@
       width="320" height="362" allowfullscreen=""></iframe>
   </section>
   <footer class="main-footer">
-    <a href="#"><img class="main__footer-logo  main__img-text" src="#" width="101" height="18" alt="Текстовый логотип школы «HTML Academy»">
+    <a href="#"><img class="main__footer-logo  main__img-text" src="#" width="101" height="18" alt="Текстовый логотип магазина «Cat-energy»">
     </a>
     <ul class="social">
       <li><a class="main__vk" aria-label="Ссылка на страницу «Вконтакте»" href="#"></a></li>
       <li><a class="main__instagram" aria-label="Ссылка на страницу «Instagram»" href="#"></a></li>
       <li><a class="main__facebook" aria-label="Ссылка на страницу «Facebook»" href="#"></a></li>
     </ul>
-    <a class="academy-logo" href="#"><img src="#" alt="Логотип школы «HTML Academy»"></a>
-    <a href="#"><img class="main__footer-logo main__img" src="#" width="34" height="38" alt="Логотип «Cat energy»"></a>
+    <a href="#"><img class="academy-text-logo" src="#" alt="Текстовый логотип школы «HTML-Academy»"></a>
+    <a href="#"><img class="academy-logo" src="#" width="34" height="38" alt="Логотип «HTML-Academy»"></a>
   </footer>
 
 </main>
