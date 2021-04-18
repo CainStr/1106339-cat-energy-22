@@ -1,0 +1,4 @@
+.nav__list a {
+  @include common-oswaldmedium(20px, 20px);
+  text-transform: uppercase;
+}

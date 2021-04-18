@@ -1,0 +1,23 @@
+.program-selection {
+  background-image: url("../img/program-selection__cat.jpg");
+  background-repeat: no-repeat;
+  height: 437px;
+  width: 320px;
+  margin-bottom: 100px;
+
+  &__title {
+    @include common-oswaldregular(36px, 36px);
+    color: $white;
+    padding-right: 36px;
+    padding-left: 36px;
+    padding-top: 27px;
+  }
+}
+
+.program-selection__subtitle {
+  @include common-oswaldregular(14px, 14px);
+  text-transform: uppercase;
+  color: $white;
+  padding-right: 36px;
+  padding-left: 36px;
+}

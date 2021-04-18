@@ -1,0 +1,64 @@
+.main-footer {
+  grid-area: main-footer;
+  background-color: $background-gray;
+}
+
+
+.main-footer__content {
+  display: grid;
+  grid-template-columns: repeat(2, fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "main__img-text main__img-text"
+    "social social"
+    "academy-text-logo academy-logo";
+
+  margin-top: 40px;
+  padding: 0 20px 20px 20px;
+  width: 280px;
+  position: relative;
+}
+
+.main__img-text {
+  grid-area: main__img-text;
+  display: flex;
+  justify-content: center;
+}
+
+.social {
+  grid-area: social;
+  display: flex;
+  justify-content: center;
+  margin-top: 52px;
+  margin-bottom: 43px;
+  border-top: 1px solid $line-gray;
+  border-bottom: 1px solid $line-gray;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.social li:not(:first-child) {
+  margin-left: 40px;
+}
+
+.main__vk {
+  content: url("../img/main__vk.svg");
+}
+
+.main__instagram {
+  content: url("../img/main__instagram.svg");
+}
+
+.main__facebook {
+  content: url("../img/main__facebook.svg");
+}
+
+.academy-text-logo {
+  grid-area: academy-text-logo;
+}
+
+.academy-logo {
+  grid-area: academy-logo;
+  display: grid;
+  justify-content: end;
+  align-: center;
+}
