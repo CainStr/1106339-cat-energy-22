@@ -16,18 +16,21 @@
   &--consestence::before {
     position: absolute;
     content: url("../img/how-it-works__item--consestence.svg");
+
     @include how-it-works__item-pic;
   }
 
   &--meal-replacement::before {
     position: absolute;
     content: url("../img/how-it-works__item--meal-replacement.svg");
+
     @include how-it-works__item-pic;
   }
 
   &--transformations::before {
     position: absolute;
     content: url("../img/how-it-works__item--transformations.svg");
+
     @include how-it-works__item-pic;
   }
 }
