@@ -13,9 +13,9 @@
     @include how-it-works__item-pic;
   }
 
-  &--consestence::before {
+  &--consistency::before {
     position: absolute;
-    content: url("../img/how-it-works__item--consestence.svg");
+    content: url("../img/how-it-works__item--consistency.svg");
 
     @include how-it-works__item-pic;
   }
