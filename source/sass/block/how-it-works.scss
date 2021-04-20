@@ -1,46 +1,33 @@
-.how-it-works__title {
-  @include common-oswaldregular(36px, 40px);
-  font-weight: inherit;
-}
-
 .how-it-works__item {
   @include common-arial(14px, 18px);
+  color: $special-dark-grey;
   display: block;
-  width: 206px;
-  height: 60px;
   position: relative;
   margin-left: 100px;
   margin-bottom: 20px;
 
-  &--1::before {
+  &--functional-nutrition::before {
     position: absolute;
-    content: url("../img/how-it-works__item--1.svg");
-    width: 60px;
-    height: 60px;
-    left: -80px;
+    content: url("../img/how-it-works__item--functional-nutrition.svg");
+
+    @include how-it-works__item-pic;
   }
 
-  &--2::before {
+  &--consestence::before {
     position: absolute;
-    content: url("../img/how-it-works__item--2.svg");
-    width: 60px;
-    height: 60px;
-    left: -80px;
+    content: url("../img/how-it-works__item--consestence.svg");
+    @include how-it-works__item-pic;
   }
 
-  &--3::before {
+  &--meal-replacement::before {
     position: absolute;
-    content: url("../img/how-it-works__item--3.svg");
-    width: 60px;
-    height: 60px;
-    left: -80px;
+    content: url("../img/how-it-works__item--meal-replacement.svg");
+    @include how-it-works__item-pic;
   }
 
-  &--4::before {
+  &--transformations::before {
     position: absolute;
-    content: url("../img/how-it-works__item--4.svg");
-    width: 60px;
-    height: 60px;
-    left: -80px;
+    content: url("../img/how-it-works__item--transformations.svg");
+    @include how-it-works__item-pic;
   }
 }

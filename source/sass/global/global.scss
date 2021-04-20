@@ -30,12 +30,6 @@ a {
   list-style: none;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 /* Скрываем заголовки section (Принятые свойства для данного класса) */
 
 .visually-hidden {
@@ -56,4 +50,11 @@ a {
   cursor: pointer;
   border: none;
   background-color: transparent;
+}
+
+.how-it-works__title,
+.example__title {
+  @include parameters-oswaldregular(36px, 40px);
+  font-weight: inherit;
+  padding-top: 27px;
 }

@@ -6,7 +6,7 @@
   margin-bottom: 100px;
 
   &__title {
-    @include common-oswaldregular(36px, 36px);
+    @include parameters-oswaldregular(36px, 36px);
     color: $white;
     padding-right: 36px;
     padding-left: 36px;
@@ -15,7 +15,7 @@
 }
 
 .program-selection__subtitle {
-  @include common-oswaldregular(14px, 14px);
+  @include parameters-oswaldregular(14px, 14px);
   text-transform: uppercase;
   color: $white;
   padding-right: 36px;

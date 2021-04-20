@@ -1,13 +1,11 @@
 .programs__item {
   display: block;
   background-color: $basic-gray;
-  height: 266px;
-  width: 280px;
   margin-top: 30px;
 }
 
 .programs__title {
-  @include common-oswaldregular(24px, 37px);
+  @include parameters-oswaldregular(24px, 37px);
   text-align: center;
 }
 
@@ -29,7 +27,7 @@
   display: block;
   width: calc(100% - 40px);
   height: 1px;
-  background-color: $line-gray;
+  background-color: $color-line-gray;
   margin-left: 20px;
 }
 

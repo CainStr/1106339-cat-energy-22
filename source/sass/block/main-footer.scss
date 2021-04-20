@@ -6,7 +6,7 @@
 
 .main-footer__content {
   display: grid;
-  grid-template-columns: repeat(2, fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
   grid-template-areas: "main__img-text main__img-text"
     "social social"
@@ -14,7 +14,6 @@
 
   margin-top: 40px;
   padding: 0 20px 20px 20px;
-  width: 280px;
   position: relative;
 }
 
@@ -30,8 +29,8 @@
   justify-content: center;
   margin-top: 52px;
   margin-bottom: 43px;
-  border-top: 1px solid $line-gray;
-  border-bottom: 1px solid $line-gray;
+  border-top: $line-gray;
+  border-bottom: $line-gray;
   padding-top: 22px;
   padding-bottom: 22px;
 }
@@ -60,5 +59,5 @@
   grid-area: academy-logo;
   display: grid;
   justify-content: end;
-  align-: center;
+  align-items: center;
 }

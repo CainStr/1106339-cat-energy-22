@@ -5,12 +5,12 @@
   font-weight: 400;
 }
 
-@mixin common-oswaldregular($fs, $lh) {
+@mixin parameters-oswaldregular($fs, $lh) {
   font-size: $fs;
   line-height: $lh;
 }
 
-@mixin common-oswaldmedium($fs, $lh) {
+@mixin parameters-oswaldmedium($fs, $lh) {
   font-size: $fs;
   line-height: $lh;
   font-family: "Oswald", "Arial", "Verdana", sans-serif;
@@ -23,4 +23,8 @@
   line-height: $lh;
 }
 
-//////////
+@mixin how-it-works__item-pic {
+  width: 60px;
+  height: 60px;
+  left: -80px;
+}

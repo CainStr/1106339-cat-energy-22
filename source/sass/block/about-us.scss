@@ -11,7 +11,7 @@
   align-content: center;
   display: grid;
 
-  @include common-oswaldregular(16px, 18px);
+  @include parameters-oswaldregular(16px, 18px);
   text-transform: uppercase;
 }
 
