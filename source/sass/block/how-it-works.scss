@@ -1,5 +1,5 @@
 .how-it-works__item {
-  @include common-arial(14px, 18px);
+  @include arial;
   color: $special-dark-grey;
   display: block;
   position: relative;
@@ -7,30 +7,18 @@
   margin-bottom: 20px;
 
   &--functional-nutrition::before {
-    position: absolute;
     content: url("../img/how-it-works__item--functional-nutrition.svg");
-
-    @include how-it-works__item-pic;
   }
 
   &--consistency::before {
-    position: absolute;
     content: url("../img/how-it-works__item--consistency.svg");
-
-    @include how-it-works__item-pic;
   }
 
   &--meal-replacement::before {
-    position: absolute;
     content: url("../img/how-it-works__item--meal-replacement.svg");
-
-    @include how-it-works__item-pic;
   }
 
   &--transformations::before {
-    position: absolute;
     content: url("../img/how-it-works__item--transformations.svg");
-
-    @include how-it-works__item-pic;
   }
 }

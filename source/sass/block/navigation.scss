@@ -1,4 +1,5 @@
-.nav__list a {
-  @include parameters-oswaldmedium(20px, 20px);
+//noinspection SassScssResolvedByNameOnly
+.navigation__list a {
+  @include oswald(20px, 20px, 500);
   text-transform: uppercase;
 }

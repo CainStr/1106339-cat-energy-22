@@ -5,7 +5,7 @@
 }
 
 .programs__title {
-  @include parameters-oswaldregular(24px, 37px);
+  @include oswald(24px, 37px);
   text-align: center;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .programs__subtitle {
-  @include common-arial(14px, 18px);
+  @include arial;
   color: $special-dark-grey;
 }
 

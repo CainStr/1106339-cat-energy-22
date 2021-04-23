@@ -11,7 +11,7 @@
   align-content: center;
   display: grid;
 
-  @include parameters-oswaldregular(16px, 18px);
+  @include oswald(16px, 18px);
   text-transform: uppercase;
 }
 
@@ -20,7 +20,7 @@
   align-content: center;
   display: grid;
 
-  @include common-arial(14px, 28px);
+  @include arial($lh: 28px);
   font-style: normal;
   color: $special-medium-dark-grey;
 }

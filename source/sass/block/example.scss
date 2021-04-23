@@ -2,12 +2,8 @@
   background-color: $background-gray;
 }
 
-.example__content {
-  display: block;
-}
-
 .example__subtitle {
-  @include common-arial(14px, 18px);
+  @include arial;
   color: $special-medium-dark-grey;
   padding-top: 33px;
 }
@@ -34,7 +30,7 @@
   margin-top: 15px;
   text-align: center;
 
-  @include parameters-oswaldregular(24px, 24px);
+  @include oswald(24px, 24px);
 }
 
 .example__sub {
@@ -43,7 +39,7 @@
   text-align: center;
   color: $special-dark-grey;
 
-  @include common-arial(12px, 12px);
+  @include arial(12px, 12px);
 }
 
 .example__cost {
@@ -51,6 +47,6 @@
   width: 100%;
   text-align: center;
 
-  @include parameters-oswaldregular(14px, 20px);
+  @include oswald($lh: 20px);
   text-transform: uppercase;
 }

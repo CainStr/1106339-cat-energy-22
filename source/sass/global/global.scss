@@ -42,7 +42,6 @@ a {
   padding: 0;
   white-space: nowrap;
   border: 0;
-  //clip-path: inset(100%);
 }
 
 .button {
@@ -52,9 +51,15 @@ a {
   background-color: transparent;
 }
 
-.how-it-works__title,
-.example__title {
-  @include parameters-oswaldregular(36px, 40px);
+.style-title {
+  @include oswald(36px, 40px);
   font-weight: inherit;
   padding-top: 27px;
+}
+
+.how-it-works__item-pic {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: -80px;
 }

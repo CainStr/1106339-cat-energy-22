@@ -1,23 +1,21 @@
 .program-selection {
   background-image: url("../img/program-selection__cat.jpg");
   background-repeat: no-repeat;
-  height: 437px;
-  width: 320px;
   margin-bottom: 100px;
 
   &__title {
-    @include parameters-oswaldregular(36px, 36px);
+    @include oswald(36px, 36px);
     color: $white;
-    padding-right: 36px;
-    padding-left: 36px;
     padding-top: 27px;
   }
 }
 
 .program-selection__subtitle {
-  @include parameters-oswaldregular(14px, 14px);
+  @include oswald($lh: 14px);
   text-transform: uppercase;
   color: $white;
-  padding-right: 36px;
-  padding-left: 36px;
+}
+.program-selection__button {
+  text-transform: uppercase;
+  color: $white;
 }
