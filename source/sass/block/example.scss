@@ -17,12 +17,14 @@
 .example__parameters {
   display: block;
   position: relative;
-
+  width: 124px;
+  height: 56px;
+  padding: 0 25px 0 25px;
 
   &::before {
     position: absolute;
     content: url("../img/example__parameters--left.svg");
-    left: -20px;
+    left: calc(100% - 125px);
   }
 }
 

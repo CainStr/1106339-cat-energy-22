@@ -1,0 +1,6 @@
+.selection-questionnaire,
+.person-parameters__form input::placeholder,
+.person-parameters__comment::placeholder {
+  @include oswald(16px, 18px);
+  text-transform: uppercase;
+}

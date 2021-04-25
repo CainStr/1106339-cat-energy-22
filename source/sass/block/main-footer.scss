@@ -33,8 +33,8 @@
   border-bottom: $line-gray;
 }
 
-.social li:not(:first-child) {
-  margin-left: 40px;
+.social li {
+  margin: 0 20px;
 }
 
 .social__item--vk {

@@ -20,7 +20,7 @@
   align-content: center;
   display: grid;
 
-  @include arial($lh: 28px);
+  @include arial($lh: 20px);
   font-style: normal;
   color: $special-medium-dark-grey;
 }

@@ -1,0 +1,41 @@
+.person-parameters__title {
+  @include oswald(36px, 36px);
+}
+
+.person-parameters__optional-title {
+  @include oswald(24px, 26px);
+  text-transform: none;
+}
+
+.person-parameters__subtitle {
+  text-transform: uppercase;
+}
+
+.person-parameters__form fieldset {
+  border: none;
+}
+
+.person-parameters__item-label {
+  color: $special-medium-dark-grey;
+}
+
+.person-parameters__label {
+  color: $special-medium-dark-grey-light;
+}
+
+.person-parameters__form input::placeholder {
+  color: $special-medium-dark-grey;
+}
+
+.person-parameters__comment::placeholder {
+  color: $special-medium-dark-grey;
+}
+
+.person-parameters__optional-button {
+  @include oswald(16px, 20px);
+  text-transform: uppercase;
+}
+
+.required-field {
+  @include arial($lh: 16px);
+}
