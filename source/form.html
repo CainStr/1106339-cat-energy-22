@@ -4,32 +4,33 @@
 <head>
   <meta charset="utf-8">
   <title>Анкета для подбора питания вашему питомцу: интернет-магазин «Cat-energy»</title>
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="main">
+<body class="page">
 
 <header class="main-header">
   <div class="main-logo">
-    <a href="#"><img class="main__img" src="img/page__img.svg" width="34" height="38" alt="Логотип «Cat energy»"></a>
-    <a href="#"><img class="main__img-text" src="img/page__img-text.svg" width="101" height="18" alt="Текстовый логотип школы «HTML Academy»"></a>
+    <a href="#"><img class="page__img" src="img/page__img.svg" width="34" height="38" alt="Логотип «Cat energy»"></a>
+    <a href="#"><img class="page__img-text" src="img/page__img-text.svg" width="101" height="18" alt="Текстовый логотип школы «HTML Academy»"></a>
   </div>
   <nav class="navigation">
     <ul class="navigation__list list">
       <li><a href="#">ГЛАВНАЯ</a></li>
       <li><a href="#">КАТАЛОГ ПРОДУКЦИИ</a></li>
-      <li><a href="form.html">ПОДБОР ПРОГРАММЫ</a></li>
+      <li>ПОДБОР ПРОГРАММЫ</li>
     </ul>
   </nav>
 </header>
 
 
-<main class="selection-questionnaire">
+<main class="selection-questionnaire placeholder-style">
   <h1 class="visually-hidden">Анкета подбора программы для питомца</h1>
   <section class="person-parameters">
     <h2 class="person-parameters__title">Подбор программы</h2>
     <p class="person-parameters__subtitle">Заполните анкету, и мы поберем <br> программу питания для вашего кота</p>
-    <form class="person-parameters__form" method="post" action="https://echo.htmlacademy.ru">
+    <form class="placeholder-style person-parameters__form" method="post" action="https://echo.htmlacademy.ru">
       <fieldset class="person-parameters__item">
         <ul class="person-parameters__item-list list">
           <li>
@@ -110,7 +111,7 @@
       </fieldset>
 
       <button class="person-parameters__optional-button button" type="submit" value="Данные владельца и его питомца">отправить заявку</button>
-      <p class="required-field">* — Обязательные поля</p>
+      <p class="person-parameters__required-field">* — Обязательные поля</p>
     </form>
   </section>
 
@@ -130,8 +131,7 @@
   </section>
   <footer class="main-footer">
     <div class="main-footer__content">
-      <a class="main__img-text" href="#"><img class="main__footer-logo  " src="img/page__img-text.svg" width="128" height="24" alt="Текстовый логотип магазина «Cat-energy»">
-      </a>
+      <a class="page__img-text" href="#"><img class="page__footer-logo" src="img/page__img-text.svg" width="128" height="24" alt="Текстовый логотип магазина «Cat-energy»">      </a>
       <ul class="social list">
         <li><a class="social__item--vk social__item" aria-label="Ссылка на страницу «Вконтакте»" href="#"></a></li>
         <li><a class="social__item--instagram social__item" aria-label="Ссылка на страницу «Instagram»" href="#"></a></li>

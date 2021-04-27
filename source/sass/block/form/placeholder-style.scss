@@ -1,0 +1,9 @@
+.placeholder-style {
+  @include oswald(16px, 18px);
+  text-transform: uppercase;
+}
+
+.placeholder-style input::placeholder {
+  @include oswald(16px, 18px);
+  text-transform: uppercase;
+}

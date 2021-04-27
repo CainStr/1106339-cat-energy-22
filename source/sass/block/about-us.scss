@@ -23,6 +23,7 @@
   @include arial($lh: 20px);
   font-style: normal;
   color: $special-medium-dark-grey;
+  text-transform: none;
 }
 
 .about-us__map {

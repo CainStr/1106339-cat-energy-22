@@ -7,3 +7,9 @@
   @include oswald();
   font-family: "Oswald", "Arial", "Verdana", sans-serif;
 }
+
+.page__img-text {
+  grid-area: main__img-text;
+  display: flex;
+  justify-content: center;
+}

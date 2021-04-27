@@ -36,6 +36,7 @@
   text-transform: uppercase;
 }
 
-.required-field {
+.person-parameters__required-field {
   @include arial($lh: 16px);
+  text-transform: none;
 }
