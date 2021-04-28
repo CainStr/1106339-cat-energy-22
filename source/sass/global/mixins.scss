@@ -1,0 +1,12 @@
+//Для шрифта
+@mixin oswald($fs:14px, $lh:18px, $fw:400) {
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+}
+
+@mixin arial($fs: 14px, $lh: 18px) {
+  font-size: $fs;
+  line-height: $lh;
+  font-family: "Arial", "Oswald", "Verdana", sans-serif;
+}

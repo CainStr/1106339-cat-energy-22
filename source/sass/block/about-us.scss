@@ -1,0 +1,32 @@
+.about-us {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 144px 362px;
+  grid-template-areas: "about-us__title bout-us__address"
+    "about-us__map about-us__map";
+}
+
+.about-us__title {
+  grid-area: about-us__title;
+  align-content: center;
+  display: grid;
+
+  @include oswald(16px, 18px);
+  text-transform: uppercase;
+}
+
+.about-us__address {
+  grid-area: bout-us__address;
+  align-content: center;
+  display: grid;
+
+  @include arial($lh: 20px);
+  font-style: normal;
+  color: $special-medium-dark-grey;
+  text-transform: none;
+}
+
+.about-us__map {
+  grid-area: about-us__map;
+  border: 0;
+}

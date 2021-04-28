@@ -1,0 +1,31 @@
+.how-it-works__item {
+  @include arial;
+  color: $special-dark-grey;
+  display: block;
+  position: relative;
+  margin-left: 100px;
+  margin-bottom: 20px;
+
+  &--functional-nutrition::before {
+    content: url("../img/how-it-works__item--functional-nutrition.svg");
+  }
+
+  &--consistency::before {
+    content: url("../img/how-it-works__item--consistency.svg");
+  }
+
+  &--meal-replacement::before {
+    content: url("../img/how-it-works__item--meal-replacement.svg");
+  }
+
+  &--transformations::before {
+    content: url("../img/how-it-works__item--transformations.svg");
+  }
+}
+
+.how-it-works__item-pic {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: -80px;
+}

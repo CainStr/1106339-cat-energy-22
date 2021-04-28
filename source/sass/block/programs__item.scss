@@ -1,0 +1,37 @@
+.programs__item {
+  display: block;
+  background-color: $basic-gray;
+  margin-top: 30px;
+}
+
+.programs__title {
+  @include oswald(24px, 37px);
+  text-align: center;
+}
+
+.programs__title--cat-sit::before {
+  content: url("../img/programs__title--cat-sit.svg");
+}
+
+.programs__title--cat-goes::before {
+  content: url("../img/programs__title--cat-goes.svg");
+}
+
+.programs__subtitle {
+  @include arial;
+  color: $special-dark-grey;
+}
+
+.programs__subtitle::after {
+  content: "";
+  display: block;
+  width: calc(100% - 40px);
+  height: 1px;
+  background-color: $color-line-gray;
+  margin-left: 20px;
+}
+
+.programs__button::after {
+  content: url("../img/programs__button.svg");
+  margin-left: 15px;
+}

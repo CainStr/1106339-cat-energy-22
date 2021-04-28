@@ -1,1 +1,24 @@
-// Начните писать стили здесь
+//GLOBAL
+@import "global/normalize.scss";
+@import "global/fonts.scss";
+@import "global/colors.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/global.scss";
+//BLOCKS
+@import "block/main-header.scss";
+@import "block/page.scss";
+@import "block/content.scss";
+@import "block/navigation.scss";
+@import "block/program-selection.scss";
+@import "block/programs__item.scss";
+@import "block/how-it-works.scss";
+@import "block/example.scss";
+@import "block/about-us.scss";
+@import "block/main-footer.scss";
+@import "block/academy-text-logo.scss";
+@import "block/academy-logo.scss";
+@import "block/social.scss";
+//BLOCKS FORM
+@import "block/form/placeholder-style.scss";
+@import "block/form/person-parameters.scss";

@@ -1,0 +1,4 @@
+.navigation__list a {
+  @include oswald(20px, 20px, 500);
+  text-transform: uppercase;
+}

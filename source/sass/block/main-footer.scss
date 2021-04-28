@@ -1,0 +1,18 @@
+.main-footer {
+  grid-area: main-footer;
+  background-color: $background-gray;
+}
+
+
+.main-footer__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "main__img-text main__img-text"
+    "social social"
+    "academy-text-logo academy-logo";
+
+  margin-top: 40px;
+  padding: 0 20px 20px 20px;
+  position: relative;
+}

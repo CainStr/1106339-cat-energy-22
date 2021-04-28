@@ -1,0 +1,22 @@
+.program-selection {
+  background-image: url("../img/program-selection__cat.jpg");
+  background-repeat: no-repeat;
+  margin-bottom: 100px;
+
+  &__title {
+    @include oswald(36px, 36px);
+    color: $white;
+    padding-top: 27px;
+  }
+}
+
+.program-selection__subtitle {
+  @include oswald($lh: 14px);
+  text-transform: uppercase;
+  color: $white;
+}
+
+.program-selection__button {
+  text-transform: uppercase;
+  color: $white;
+}
