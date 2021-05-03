@@ -32,7 +32,11 @@
   @include oswald(16px, 16px);
   font-weight: inherit;
   text-transform: uppercase;
-  color: $basic-black-text;
+  color: $special-medium-dark-grey-light;
+}
+
+.products__additional-gift-title {
+  color: $white;
 }
 
 .products__button {
