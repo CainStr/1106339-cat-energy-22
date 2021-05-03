@@ -5,7 +5,8 @@
 @import "global/variables.scss";
 @import "global/mixins.scss";
 @import "global/global.scss";
-//BLOCKS
+@import "global/button.scss";
+//BLOCKS INDEX
 @import "block/main-header.scss";
 @import "block/page.scss";
 @import "block/content.scss";
@@ -22,3 +23,5 @@
 //BLOCKS FORM
 @import "block/form/placeholder-style.scss";
 @import "block/form/person-parameters.scss";
+//BLOCKS CATALOG
+@import "block/catalog/products.scss";
