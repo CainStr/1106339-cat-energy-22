@@ -1,0 +1,62 @@
+.products__catalog-title {
+  @include oswald(36px, 36px);
+  color: $basic-black;
+}
+
+.products__specifications {
+  @include arial(12px, 16px);
+  color: $special-medium-dark-grey;
+}
+
+.products__list-title {
+  @include oswald(16px, 20px);
+  text-transform: uppercase;
+  color: $basic-black-level-1;
+}
+
+.products__list-subtitle {
+  @include arial(12px, 16px);
+  color: $special-medium-dark-grey;
+}
+
+.products__additional-specifications {
+  @include arial(14px, 14px);
+  color: $special-medium-dark-grey;
+}
+
+.products__additional-title {
+  font-weight: inherit;
+}
+
+.products__additional-subtitle {
+  @include oswald(16px, 16px);
+  font-weight: inherit;
+  text-transform: uppercase;
+  color: $special-medium-dark-grey-light;
+}
+
+.products__additional-gift-title {
+  color: $white;
+}
+
+.products__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include oswald(16px, 20px);
+  text-transform: uppercase;
+}
+
+.products__list-item-button {
+  display: flex;
+  background-color: $basic-gray;
+  color: $special-medium-dark-grey;
+  width: 280px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+
+  @include oswald(16px, 20px);
+  text-transform: uppercase;
+}
