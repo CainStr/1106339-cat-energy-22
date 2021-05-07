@@ -6,13 +6,15 @@
 @import "global/mixins.scss";
 @import "global/global.scss";
 @import "global/button.scss";
+@import "global/main-logo.scss";
+@import "global/container.scss";
 //BLOCKS INDEX
 @import "block/main-header.scss";
 @import "block/page.scss";
 @import "block/content.scss";
 @import "block/navigation.scss";
 @import "block/program-selection.scss";
-@import "block/programs__item.scss";
+@import "block/programs.scss";
 @import "block/how-it-works.scss";
 @import "block/example.scss";
 @import "block/about-us.scss";
@@ -20,6 +22,7 @@
 @import "block/academy-text-logo.scss";
 @import "block/academy-logo.scss";
 @import "block/social.scss";
+@import "block/page-map.scss";
 //BLOCKS FORM
 @import "block/form/placeholder-style.scss";
 @import "block/form/person-parameters.scss";

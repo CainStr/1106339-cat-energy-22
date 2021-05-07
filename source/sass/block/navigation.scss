@@ -1,4 +1,33 @@
 .navigation__list a {
   @include oswald(20px, 20px, 500);
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(18px, 24px);
+
+    @media (min-width: $desktop-width) {
+      @include oswald(20px, 30px);
+      color: $white;
+      background-color: #68b738;
+    }
+  }
+}
+
+.navigation__list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-left: 95px;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 42px;
+    }
+  }
+}
+
+.navigation__list li:not(:first-child) {
+  @media (min-width: $tablet-width) {
+    margin-left: 35px;
+  }
 }
