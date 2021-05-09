@@ -1,3 +1,9 @@
 .main-header {
   grid-area: main-header;
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
 }

@@ -1,0 +1,96 @@
+.programs__item {
+  background-color: $basic-gray;
+  margin-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding: 47px 280px 53px 52px;
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 47px 61px 33px 52px;
+    display: block;
+    width: 570px;
+  }
+}
+
+.programs__title--cat-sit::after {
+  content: url("../img/programs__title--cat-sit.svg");
+  position: absolute;
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    content: none;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .programs__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 570px);
+    grid-column-gap: 80px;
+  }
+}
+
+.programs__title {
+  @include oswald(24px, 37px);
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 73px;
+    margin: 0;
+  }
+}
+
+.programs__title--cat-sit::before {
+  content: url("../img/programs__title--cat-sit.svg");
+}
+
+.programs__title--cat-goes::before {
+  content: url("../img/programs__title--cat-goes.svg");
+}
+
+.programs__title--cat-sit::before,
+.programs__title--cat-goes::before {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.programs__subtitle {
+  @include arial;
+  color: $special-medium-dark-grey;
+}
+
+.programs__subtitle::after {
+  content: "";
+  display: block;
+  width: calc(100% - 40px);
+  height: 1px;
+  background-color: $color-line-gray;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.programs__button::after {
+  content: url("../img/programs__button.svg");
+  margin-left: 15px;
+}
