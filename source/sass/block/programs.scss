@@ -6,24 +6,25 @@
     display: block;
     padding: 47px 280px 53px 52px;
     position: relative;
+  }
 
-    @media (min-width: $desktop-width) {
-      padding: 47px 61px 33px 52px;
-      display: block;
-      width: 570px;
-    }
-
-    .programs__title--cat-sit::after {
-      content: url("../img/programs__title--cat-sit.svg");
-      position: absolute;
-      right: 0;
-
-      @media (min-width: $tablet-width) {
-        content: none;
-      }
-    }
+  @media (min-width: $desktop-width) {
+    padding: 47px 61px 33px 52px;
+    display: block;
+    width: 570px;
   }
 }
+
+.programs__title--cat-sit::after {
+  content: url("../img/programs__title--cat-sit.svg");
+  position: absolute;
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    content: none;
+  }
+}
+
 
 @media (min-width: $desktop-width) {
   .programs__list {
@@ -53,21 +54,14 @@
 
 .programs__title--cat-sit::before {
   content: url("../img/programs__title--cat-sit.svg");
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: flex;
-    position: absolute;
-    left: 0;
-  }
 }
 
 .programs__title--cat-goes::before {
   content: url("../img/programs__title--cat-goes.svg");
+}
 
+.programs__title--cat-sit::before,
+.programs__title--cat-goes::before {
   @media (min-width: $tablet-width) {
     display: none;
   }

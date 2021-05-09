@@ -3,9 +3,9 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 calc(50% - 384px + 30px);
+  }
 
-    @media (min-width: $desktop-width) {
-      padding: 0 calc(50% - 720px + 110px);
-    }
+  @media (min-width: $desktop-width) {
+    padding: 0 calc(50% - 720px + 110px);
   }
 }

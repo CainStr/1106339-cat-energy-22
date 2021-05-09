@@ -4,12 +4,11 @@
 
   @media (min-width: $tablet-width) {
     @include oswald(18px, 24px);
+  }
 
-    @media (min-width: $desktop-width) {
-      @include oswald(20px, 30px);
-      color: $white;
-      background-color: #68b738;
-    }
+  @media (min-width: $desktop-width) {
+    @include oswald(20px, 30px);
+    color: $white;
   }
 }
 
@@ -19,10 +18,10 @@
   @media (min-width: $tablet-width) {
     display: flex;
     margin-left: 95px;
+  }
 
-    @media (min-width: $desktop-width) {
-      margin-top: 42px;
-    }
+  @media (min-width: $desktop-width) {
+    margin-top: 42px;
   }
 }
 
