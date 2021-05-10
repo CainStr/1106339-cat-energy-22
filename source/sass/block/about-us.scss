@@ -1,6 +1,18 @@
 .about-us {
   display: flex;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    background-color: $white;
+    width: 570px;
+    position: absolute;
+    z-index: 2;
+    margin-top: 60px;
+    padding: 62px 89px 51px 76px;
+    justify-content: center;
+    margin-left: 110px;
+  }
 }
 
 .about-us__title {
@@ -9,6 +21,11 @@
 
   @include oswald(16px, 18px);
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    @include oswald(20px, 21px);
+    margin-right: 85px;
+  }
 }
 
 .about-us__address {
@@ -20,9 +37,16 @@
   font-style: normal;
   color: $special-medium-dark-grey;
   text-transform: none;
+
+  @media (min-width: $desktop-width) {
+    @include arial(16px, 20px);
+    text-align: start;
+    display: grid;
+  }
 }
 
-.about-us__map {
-  grid-area: about-us__map;
-  border: 0;
+.about-us__address-br {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
 }
