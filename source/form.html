@@ -3,19 +3,20 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Анкета для подбора питания вашему питомцу: интернет-магазин «Cat-energy»</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page">
 
-<header class="main-header">
+<header class="main-header container">
   <div class="main-logo">
-    <a href="#"><img class="page__img" src="img/page__img.svg" width="34" height="38" alt="Логотип «Cat energy»"></a>
-    <a href="#"><img class="page__img-text" src="img/page__img-text.svg" width="101" height="18" alt="Текстовый логотип школы «HTML Academy»"></a>
+    <a class="page__img" href="#"><img src="img/page__img.svg" width="34" height="38" alt="Логотип «Cat energy»"></a>
+    <a class="page__img-text" href="#"><img src="img/page__img-text.svg" width="101" height="18" alt="Текстовый логотип школы «HTML Academy»"></a>
   </div>
   <nav class="navigation">
-    <ul class="navigation__list list">
+    <ul class="navigation__list navigation__list--form-desktop list">
       <li><a href="index.html">ГЛАВНАЯ</a></li>
       <li><a href="catalog.html">КАТАЛОГ ПРОДУКЦИИ</a></li>
       <li><a>ПОДБОР ПРОГРАММЫ</a></li>
@@ -23,72 +24,71 @@
   </nav>
 </header>
 
-
-<main class="selection-questionnaire placeholder-style">
+<main class="content selection-questionnaire placeholder-style ">
   <h1 class="visually-hidden">Анкета подбора программы для питомца</h1>
-  <section class="person-parameters">
+
+  <section class="person-parameters container">
     <h2 class="person-parameters__title">Подбор программы</h2>
     <p class="person-parameters__subtitle">Заполните анкету, и мы поберем <br> программу питания для вашего кота</p>
     <form class="placeholder-style person-parameters__form" method="post" action="https://echo.htmlacademy.ru">
-      <fieldset class="person-parameters__item">
-        <ul class="person-parameters__item-list list">
-          <li>
-            <label class="person-parameters__item-label person-parameters__name">имя:*
-              <input type="text" name="cat-name" placeholder="БАРСИК">
-            </label>
-          </li>
-          <li>
-            <label class="person-parameters__item-label person-parameters__weight">вес (кг):*
-              <input type="text" name="cat-weight" placeholder="7">
-            </label>
-          </li>
-          <li>
-            <label class="person-parameters__item-label person-parameters__age">возраст (лет):
-              <input type="text" name="cat-age" placeholder="7">
-            </label>
-          </li>
-        </ul>
-      </fieldset>
+      <div class="person-parameters__item-position">
+        <fieldset class="person-parameters__item">
+          <ul class="person-parameters__item-list list">
+            <li>
+              <label class="person-parameters__item-label person-parameters__name" for="cat-name">имя:*
+              </label>
+              <input class="person-parameters__item-input" type="text" name="cat-name" id="cat-name"  placeholder="БАРСИК">
+            </li>
+            <li>
+              <label class="person-parameters__item-label person-parameters__weight" for="cat-weight">вес (кг):*
+              </label>
+              <input class="person-parameters__item-input" type="text" name="cat-weight" id="cat-weight" placeholder="7">
+            </li>
+            <li>
+              <label class="person-parameters__item-label person-parameters__age" for="cat-age">возраст (лет):
+              </label>
+              <input class="person-parameters__item-input" type="text" name="cat-age" id="cat-age" placeholder="7">
+            </li>
+          </ul>
+        </fieldset>
 
-      <fieldset class="person-parameters__purpose">
-        <ul class="person-parameters__purpose-list list">
-          <li>
-            <input type="radio" value="weight-loss" name="radio-mass" id="weight-loss" checked>
-            <label class="person-parameters__label" for="weight-loss">похудение</label>
-          </li>
-          <li>
-            <input type="radio" value="weight-gain" name="radio-mass" id="weight-gain">
-            <label class="person-parameters__label" for="weight-gain">набор массы</label>
-          </li>
-          <li>
-            <input type="radio" value="need-some-advice" name="radio-mass" id="need-some-advice">
-            <label class="person-parameters__label" for="need-some-advice">не знаю (нужен ваш совет)</label>
-          </li>
-        </ul>
-      </fieldset>
-
+        <fieldset class="person-parameters__purpose">
+          <ul class="person-parameters__purpose-list list">
+            <li>
+              <input type="radio" value="weight-loss" name="radio-mass" id="weight-loss" checked>
+              <label class="person-parameters__label" for="weight-loss">похудение</label>
+            </li>
+            <li>
+              <input type="radio" value="weight-gain" name="radio-mass" id="weight-gain">
+              <label class="person-parameters__label" for="weight-gain">набор массы</label>
+            </li>
+            <li>
+              <input type="radio" value="need-some-advice" name="radio-mass" id="need-some-advice">
+              <label class="person-parameters__label" for="need-some-advice">не знаю (нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
       <fieldset class="person-parameters__contacts">
-        <legend class="person-parameters__optional-title"> Контактные данные (владелец кота)</legend>
+        <legend class="person-parameters__optional-title green-line green-line--contacts"> Контактные данные (владелец кота)</legend>
         <ul class="person-parameters__contacts-list list">
-          <li class="person-parameters__email">
-            <label>E-mail:*
-              <input type="email" name="person-email" placeholder="kuklachev@gmail.com">
-            </label>
+          <li class="person-parameters__email person-parameters__contacts-list-item">
+            <label  for="person-email">E-mail:*</label>
+            <input class="person-parameters__email-input" type="email" name="person-email" id="person-email" placeholder="kuklachev@gmail.com">
           </li>
-          <li class="person-parameters__telephone">
-            <label>Телефон:*
-              <input type="tel" name="person-telephone" placeholder="8 (960) 900-60-90">
-            </label>
+          <li class="person-parameters__telephone person-parameters__contacts-list-item">
+            <label  for="person-telephone">Телефон:*</label>
+              <input class="person-parameters__telephone-input" type="tel" name="person-telephone" id="person-telephone" placeholder="8 (960) 900-60-90">
           </li>
           <li class="person-parameters__comment-block">
-            <label class="person-parameters__optional-title" for="person-parameters__comment">Комментарий</label>
+            <label class="person-parameters__optional-title green-line" for="person-parameters__comment">Комментарий</label>
             <textarea class="person-parameters__comment" name="person-parameters__comment" placeholder="Расскажите обо всех повадках кота" id="person-parameters__comment"></textarea>
           </li>
         </ul>
       </fieldset>
 
       <fieldset class="person-parameters__optional">
-        <legend class="person-parameters__optional-title">Дополнительно</legend>
+        <legend class="person-parameters__optional-title green-line">Дополнительно</legend>
         <ul class="person-parameters__optional-list list">
           <li>
             <input type="checkbox" name="sweetener" id="sweetener" checked>
@@ -108,39 +108,42 @@
           </li>
         </ul>
       </fieldset>
-
-      <button class="person-parameters__optional-button button" type="submit" value="Данные владельца и его питомца">отправить заявку</button>
-      <p class="person-parameters__required-field">* — Обязательные поля</p>
+      <div class="person-parameters__optional-addition">
+        <button class="person-parameters__optional-button button" type="submit" value="Данные владельца и его питомца">отправить заявку</button>
+        <p class="person-parameters__required-field">* — Обязательные поля</p>
+      </div>
     </form>
   </section>
 
-
-  <section class="about-us">
+  <section class="about-us container">
     <h2 class="visually-hidden">Расположение и номер телефона магазина «Cat energy»</h2>
     <p class="about-us__title">приглашаем
       к сотрудничеству дилеров!
     </p>
-    <address class="about-us__address">ул. Большая
-      Конюшенная, д. 19/8
-      Санкт-Петербург
+    <address class="about-us__address"> <span class="about-us__address-br">ул. Большая
+      Конюшенная, д. 19/8</span> Санкт-Петербург
     </address>
+  </section>
+  <section class="page-map">
+    <h2 class="visually-hidden">Карта расположения интернет-магазин «Cat-energy»</h2>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586764!2d30.320853352277865!3d59.938716481787395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1617496621866!5m2!1sru!2sru"
-      width="320" height="362" allowfullscreen=""></iframe>
+      height="362" allowfullscreen=""></iframe>
   </section>
-  <footer class="main-footer">
-    <div class="main-footer__content">
-      <a class="page__img-text" href="#"><img class="page__footer-logo" src="img/page__img-text.svg" width="128" height="24" alt="Текстовый логотип магазина «Cat-energy»">      </a>
-      <ul class="social list">
-        <li><a class="social__item--vk social__item" aria-label="Ссылка на страницу «Вконтакте»" href="#"></a></li>
-        <li><a class="social__item--instagram social__item" aria-label="Ссылка на страницу «Instagram»" href="#"></a></li>
-        <li><a class="social__item--facebook social__item" aria-label="Ссылка на страницу «Facebook»" href="#"></a></li>
-      </ul>
-      <a class="academy-text-logo" href="#"><img src="img/academy-2.svg" alt="Текстовый логотип школы «HTML-Academy»"></a>
-      <a class="academy-logo" href="#"><img src="img/academy-logo.svg" width="34" height="38" alt="Логотип «HTML-Academy»"></a>
-    </div>
-  </footer>
-
 </main>
+
+<footer class="main-footer container">
+  <div class="main-footer__content ">
+    <a class="page__img-text" href="#"><img class="page__footer-logo  " src="img/page__img-text.svg" width="128" height="24" alt="Текстовый логотип магазина «Cat-energy»">
+    </a>
+    <ul class="social list">
+      <li><a class="social__item--vk social__item" aria-label="Ссылка на страницу «Вконтакте»" href="#"></a></li>
+      <li><a class="social__item--instagram social__item" aria-label="Ссылка на страницу «Instagram»" href="#"></a></li>
+      <li><a class="social__item--facebook social__item" aria-label="Ссылка на страницу «Facebook»" href="#"></a></li>
+    </ul>
+    <a class="academy-text-logo" href="#"><img src="img/academy-2.svg" alt="Текстовый логотип школы «HTML-Academy»"></a>
+    <a class="academy-logo" href="#"><img src="img/academy-logo.svg" width="34" height="38" alt="Логотип «HTML-Academy»"></a>
+  </div>
+</footer>
 </body>
 </html>
