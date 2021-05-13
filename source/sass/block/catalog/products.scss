@@ -13,8 +13,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, 245px);
     grid-column-gap: 80px;
-    align-items: end;
-    padding-top: 30px;
   }
 }
 
@@ -29,13 +27,13 @@
 
 
   @media (min-width: $tablet-width) {
-    display: grid;
     justify-content: center;
     background-image: linear-gradient(to top, $basic-gray 90%, $white 10%);
   }
 }
 
-.products__list-item::after {
+.products__list-item::after,
+.products__additional::before {
   @media (max-width: $mobile-width-only) {
     content: "";
     position: absolute;
@@ -47,8 +45,7 @@
   }
 }
 
-.products__img,
-.products__img-mini {
+.products__img {
   justify-content: center;
   display: flex;
 
@@ -73,8 +70,6 @@
 
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $special-gray;
-    display: flex;
-    justify-content: space-between;
     padding-bottom: 10px;
   }
 }
@@ -106,23 +101,13 @@
   grid-template-areas: "products__additional-title" "products__additional-list" "products__additional-gift";
 }
 
-.products__additional::before {
-  @media (max-width: $mobile-width-only) {
-    content: "";
-    position: absolute;
-    width: 100%;
-    left: 0;
-    height: 1px;
-    background-color: $special-gray;
-    margin-top: -30px;
-  }
-}
 
 .products__additional-specifications {
   @include arial(14px, 14px);
   color: $special-medium-dark-grey;
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
+  width: 100%;
 }
 
 .products__additional-title {
@@ -169,12 +154,6 @@
   @media (min-width: $tablet-width) {
     grid-area: products__additional-subtitle;
     margin-top: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 auto 0 0;
-    display: grid;
-    width: 250px;
   }
 }
 
@@ -248,7 +227,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "products__additional-subtitle products__additional-specifications products__button products__button";
     align-items: center;
