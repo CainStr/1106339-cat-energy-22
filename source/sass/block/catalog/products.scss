@@ -4,8 +4,8 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(auto-fill, 324px);
-    grid-column-gap: 60px;
-    align-items: end;
+    grid-gap: 60px;
+    align-content: end;
     padding-top: 30px;
   }
 
@@ -25,10 +25,17 @@
     grid-template-areas: "img products__list-title" "img products__specifications" "products__button products__button";
   }
 
-
   @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-areas: "img" "products__list-title" "products__specifications" "products__button";
+    grid-template-rows: minmax(110px, 130px);
+    background-image: linear-gradient(to top, $basic-gray 80%, $white 20%);
+    padding-right: 37px;
+    padding-left: 37px;
+
+    min-height: 511px;
+    align-items: end;
     justify-content: center;
-    background-image: linear-gradient(to top, $basic-gray 90%, $white 10%);
   }
 }
 
@@ -48,10 +55,15 @@
 .products__img {
   justify-content: center;
   display: flex;
+  padding-top: 20px;
 
   @media (max-width: $mobile-width-only) {
     grid-area: img;
-    margin-top: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 10px;
+    display: grid;
   }
 }
 
@@ -71,6 +83,7 @@
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $special-gray;
     padding-bottom: 10px;
+    align-content: end;
   }
 }
 
@@ -88,6 +101,10 @@
   @media (max-width: $mobile-width-only) {
     grid-area: products__list-title;
     padding-bottom: 14px;
+
+    @media (max-width: $tablet-width) {
+      text-align: end;
+    }
   }
 }
 
@@ -99,14 +116,19 @@
 .products__additional {
   display: grid;
   grid-template-areas: "products__additional-title" "products__additional-list" "products__additional-gift";
-}
 
+  @media (min-width: $desktop-width) {
+    grid-template-areas: "products__additional-title ." "products__additional-list products__additional-gift";
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 80px;
+  }
+}
 
 .products__additional-specifications {
   @include arial(14px, 14px);
   color: $special-medium-dark-grey;
   display: flex;
-  //justify-content: space-between;
   width: 100%;
 }
 
@@ -159,11 +181,60 @@
 
 .products__additional-gift {
   grid-area: products__additional-gift;
-  display: grid;
+  background-image: url("../img/products__additional-gift.jpg");
+  min-height: 200px;
+
+  @media (min-width: $tablet-width) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    background-position: 50% -330px;
+    margin-top: 30px;
+    justify-items: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    min-height: 90%;
+  }
 }
 
 .products__additional-gift-title {
   color: $white;
+  position: relative;
+  padding-top: 100px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-items: end;
+    padding-right: 124px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: 1/-1;
+    text-align: start;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    padding-right: 124px;
+  }
+}
+
+.products__additional-gift-title::before {
+  content: url("../img/products__additional-gift-title.svg");
+  position: absolute;
+  top: 10px;
+  left: 101px;
+
+  @media (max-width: $desktop-width) {
+    content: url("../../img/products__additional-gift-title.svg");
+    left: -406px;
+    top: 25%;
+  }
 }
 
 .products__button {
@@ -179,48 +250,92 @@
     grid-area: products__button;
   }
 
+  @media (min-width: $tablet-width) {
+    width: 248px;
+  }
+
   @media (min-width: $desktop-width) {
+    grid-area: products__button;
     width: 168px;
-    margin-left: auto;
   }
 }
 
 .products__list-item--additional {
-  @media (max-width: $mobile-width-only) {
-    display: grid;
-    grid-template-areas: "products__list-title--additional" "products__list-subtitle--additional" "products__button--additional";
+  display: grid;
+  grid-template-areas: "products__list-title--additional" "products__list-subtitle--additional" "products__button--additional";
+  grid-template-rows: 50px 50px 50px;
+  align-content: end;
+  text-align: center;
+  background-image: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: repeat(3, auto);
   }
 }
 
 .products__list-title--additional {
+  grid-area: products__list-title--additional;
+  display: grid;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+
   @media (max-width: $mobile-width-only) {
-    grid-area: products__list-title--additional;
+    padding-top: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 134px;
+    display: block;
+    justify-self: center;
+  }
+}
+
+.products__list-title--additional::before {
+  @media (max-width: $mobile-width-only) {
+    content: url("../img/products__list-title--additional.svg");
+    position: absolute;
+    top: -10px;
+    left: 125px;
+  }
+
+  @media (min-width: $tablet-width) {
+    content: url("../img/big-products__list-title--additional.svg");
+    position: absolute;
+    top: -100px;
+    right: 42px;
   }
 }
 
 .products__list-subtitle--additional {
-  @media (max-width: $mobile-width-only) {
-    grid-area: products__list-subtitle--additional;
+  grid-area: products__list-subtitle--additional;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 40px;
+    width: 167px;
+    justify-self: center;
+    display: block;
+    margin-bottom: 87px;
   }
 }
 
 .products__button--additional {
+  grid-area: products__button--additional;
   background-color: $basic-gray;
   color: $special-medium-dark-grey;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 
   @include oswald(16px, 20px);
   text-transform: uppercase;
-
-  @media (max-width: $mobile-width-only) {
-    grid-area: products__button--additional;
-  }
 }
 
 .products__additional-item {
   border-bottom: $line-gray-contacts;
-  padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
+    grid-area: products__additional-item;
     display: grid;
     grid-template-areas: "products__additional-subtitle products__additional-specifications" "products__button products__button";
     padding: 26px 38px 28px 38px;
@@ -230,6 +345,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "products__additional-subtitle products__additional-specifications products__button products__button";
     align-items: center;
-    padding: 26px 0 28px 0;
+    padding: 17px 0 17px 0;
   }
 }
