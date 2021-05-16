@@ -3,6 +3,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(auto-fill, 324px);
+    //grid-template-rows: repeat(auto-fill, min(430px));
     grid-gap: 60px;
     align-content: end;
     padding-top: 30px;
@@ -18,6 +19,7 @@
   padding-bottom: 30px;
   margin-top: 30px;
   display: grid;
+  position: relative;
 
   @media (max-width: $mobile-width-only) {
     grid-template-areas: "img products__list-title" "img products__specifications" "products__button products__button";
@@ -25,11 +27,11 @@
 
   @media (min-width: $tablet-width) {
     grid-template-areas: "img" "products__list-title" "products__specifications" "products__button";
-    grid-template-rows: minmax(110px, 130px);
-    background-image: linear-gradient(to top, $basic-gray 80%, $white 20%);
+    //grid-template-rows: minmax(80px, 130px);
+    background-color: $basic-gray;
     padding-right: 37px;
     padding-left: 37px;
-    min-height: 511px;
+    //min-height: 430px;
     align-items: end;
     justify-content: center;
   }
@@ -58,8 +60,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    min-height: 10px;
     display: grid;
+    margin-top: -60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 85px;
   }
 }
 
@@ -307,7 +313,7 @@
   grid-template-rows: 50px 50px 50px;
   align-content: end;
   text-align: center;
-  background-image: none;
+  background-color: inherit;
 
   @media (min-width: $tablet-width) {
     grid-template-rows: repeat(3, auto);
@@ -330,6 +336,7 @@
     width: 134px;
     display: block;
     justify-self: center;
+    padding-top: 162px;
   }
 }
 
@@ -344,7 +351,7 @@
 
   @media (min-width: $tablet-width) {
     content: url("../img/big-products__list-title--additional.svg");
-    top: -100px;
+    top: 52px;
     right: 42px;
   }
 }
@@ -353,11 +360,11 @@
   grid-area: products__list-subtitle--additional;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 40px;
+    padding-bottom: 87px;
     width: 167px;
     justify-self: center;
     display: block;
-    margin-bottom: 87px;
+    margin-bottom: 0;
   }
 }
 
