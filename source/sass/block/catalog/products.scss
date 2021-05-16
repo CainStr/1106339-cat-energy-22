@@ -2,7 +2,6 @@
   display: grid;
 
   @media (min-width: $tablet-width) {
-    display: grid;
     grid-template-columns: repeat(auto-fill, 324px);
     grid-gap: 60px;
     align-content: end;
@@ -10,7 +9,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
     grid-template-columns: repeat(auto-fill, 245px);
     grid-column-gap: 80px;
   }
@@ -19,20 +17,18 @@
 .products__list-item {
   padding-bottom: 30px;
   margin-top: 30px;
+  display: grid;
 
   @media (max-width: $mobile-width-only) {
-    display: grid;
     grid-template-areas: "img products__list-title" "img products__specifications" "products__button products__button";
   }
 
   @media (min-width: $tablet-width) {
-    display: grid;
     grid-template-areas: "img" "products__list-title" "products__specifications" "products__button";
     grid-template-rows: minmax(110px, 130px);
     background-image: linear-gradient(to top, $basic-gray 80%, $white 20%);
     padding-right: 37px;
     padding-left: 37px;
-
     min-height: 511px;
     align-items: end;
     justify-content: center;
@@ -101,10 +97,10 @@
   @media (max-width: $mobile-width-only) {
     grid-area: products__list-title;
     padding-bottom: 14px;
+  }
 
-    @media (max-width: $tablet-width) {
-      text-align: end;
-    }
+  @media (max-width: $tablet-width) {
+    text-align: end;
   }
 }
 
@@ -129,7 +125,21 @@
   @include arial(14px, 14px);
   color: $special-medium-dark-grey;
   display: flex;
-  width: 100%;
+  //width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.products__additional-specifications-cost {
+  @media (max-width: $mobile-width-only) {
+    margin-left: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 50px;
+  }
 }
 
 .products__additional-title {
@@ -144,6 +154,10 @@
 
 .products__additional-list {
   grid-area: products__additional-list;
+
+  @media (min-width: $tablet-width) {
+    border-top: $line-gray-contacts;
+  }
 
   @media (min-width: $desktop-width) {
     border-top: $line-gray-contacts;
@@ -184,11 +198,12 @@
   background-image: url("../img/products__additional-gift.jpg");
   min-height: 200px;
 
+
   @media (min-width: $tablet-width) {
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
-    background-position: 50% -330px;
+    background-position: 90%;
     margin-top: 30px;
     justify-items: right;
   }
@@ -196,10 +211,14 @@
   @media (min-width: $desktop-width) {
     width: 245px;
     min-height: 90%;
+    align-items: end;
+    padding-bottom: 42px;
   }
 }
 
 .products__additional-gift-title {
+  @include arial(16px, 20px);
+  font-weight: initial;
   color: $white;
   position: relative;
   padding-top: 100px;
@@ -208,32 +227,36 @@
   @media (min-width: $tablet-width) {
     text-align: start;
     padding-top: 0;
-    display: flex;
     align-items: center;
     justify-items: end;
     padding-right: 124px;
+    display: flex;
   }
 
   @media (min-width: $desktop-width) {
-    grid-area: 1/-1;
-    text-align: start;
-    padding-top: 0;
-    display: flex;
-    align-items: center;
-    padding-right: 124px;
+    text-align: center;
+    justify-content: center;
+    padding-right: 43px;
   }
 }
 
 .products__additional-gift-title::before {
-  content: url("../img/products__additional-gift-title.svg");
   position: absolute;
-  top: 10px;
-  left: 101px;
+  content: url("../img/products__additional-gift-title.svg");
 
-  @media (max-width: $desktop-width) {
-    content: url("../../img/products__additional-gift-title.svg");
+  @media (max-width: $mobile-width-only) {
+    top: 10px;
+    left: 101px;
+  }
+
+  @media (min-width: $tablet-width) {
     left: -406px;
     top: 25%;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: - 150px;
+    left: 45px;
   }
 }
 
@@ -251,12 +274,30 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 248px;
+
+    grid-area: products__button;
   }
 
   @media (min-width: $desktop-width) {
     grid-area: products__button;
     width: 168px;
+  }
+}
+
+.products__button-width {
+  grid-area: products__button-width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 648px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 244px;
+    margin-left: auto;
   }
 }
 
@@ -270,6 +311,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-rows: repeat(3, auto);
+    border: $line-gray-contacts;
   }
 }
 
@@ -292,16 +334,16 @@
 }
 
 .products__list-title--additional::before {
+  position: absolute;
+
   @media (max-width: $mobile-width-only) {
     content: url("../img/products__list-title--additional.svg");
-    position: absolute;
     top: -10px;
     left: 125px;
   }
 
   @media (min-width: $tablet-width) {
     content: url("../img/big-products__list-title--additional.svg");
-    position: absolute;
     top: -100px;
     right: 42px;
   }
@@ -329,22 +371,31 @@
 
   @include oswald(16px, 20px);
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    width: 168px;
+  }
 }
 
 .products__additional-item {
   border-bottom: $line-gray-contacts;
+  padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     grid-area: products__additional-item;
     display: grid;
-    grid-template-areas: "products__additional-subtitle products__additional-specifications" "products__button products__button";
+    grid-template-areas: "products__additional-subtitle products__additional-specifications" "products__button-width products__button-width";
     padding: 26px 38px 28px 38px;
+    border-left: $line-gray-contacts;
+    border-right: $line-gray-contacts;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "products__additional-subtitle products__additional-specifications products__button products__button";
+    grid-template-areas: "products__additional-subtitle products__additional-specifications products__button-width products__button-width";
     align-items: center;
-    padding: 17px 0 17px 0;
+    padding: 17px 0;
+    border-right: none;
+    border-left: none;
   }
 }
