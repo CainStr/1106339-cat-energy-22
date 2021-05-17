@@ -51,12 +51,6 @@
   }
 }
 
-.person-parameters__item-list {
-  @media (min-width: $desktop-width) {
-
-  }
-}
-
 .person-parameters__item-list li {
   //margin-bottom: 41px;
   display: grid;
@@ -213,16 +207,13 @@
 
 .person-parameters__optional-input-checkbox:checked + .person-parameters__optional-label::after {
   content: url("../img/ok.svg");
-  //width: 10px;
-  //height: 10px;
-  //display: block;
   position: absolute;
   left: -44px;
   top: 1px;
 
   @media (min-width: $tablet-width) {
     left: -52px;
-    top:-2px
+    top: -2px;
   }
 }
 
