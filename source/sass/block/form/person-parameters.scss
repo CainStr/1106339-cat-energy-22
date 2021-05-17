@@ -2,6 +2,10 @@
   padding: 0;
 }
 
+.person-parameters__item {
+  min-height: 196px;
+}
+
 .person-parameters__item,
 .person-parameters__contacts,
 .person-parameters__optional {
@@ -31,6 +35,11 @@
     margin-left: 0;
     width: 568px;
   }
+
+  @media (min-width: $desktop-width) {
+    //margin-left: auto;
+    min-height: 200px;
+  }
 }
 
 .person-parameters__title {
@@ -39,6 +48,12 @@
 
   @media (min-width: $tablet-width) {
     @include oswald(60px, 60px);
+  }
+}
+
+.person-parameters__item-list {
+  @media (min-width: $desktop-width) {
+
   }
 }
 
@@ -59,7 +74,9 @@
 
 .person-parameters__item-position {
   @media (min-width: $desktop-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
   }
 }
 
@@ -105,7 +122,7 @@
     grid-template-rows: auto auto;
     grid-template-areas: "person-parameters__email person-parameters__telephone"
       "person-parameters__comment-block person-parameters__comment-block";
-    grid-column-gap: 40px;
+    grid-column-gap: 80px;
   }
 }
 
@@ -117,20 +134,23 @@
   grid-area: person-parameters__telephone;
 }
 
-.person-parameters__email-input,
-.person-telephone__input {
-  border: $line-gray-contacts;
-}
 
 .person-parameters__contacts-list-item {
   display: grid;
   grid-template-columns: auto 1fr;
   margin-bottom: 14px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
-  }
+  align-items: center;
 }
+
+.person-parameters__email-input,
+.person-parameters__telephone-input {
+  border: 1px solid $form-border;
+  margin-left: 13px;
+  padding: 10px 20px;
+  display: flex;
+}
+
+
 
 
 .person-parameters__comment-block {
@@ -219,66 +239,70 @@
   padding: 25px 28px;
   display: grid;
   align-items: center;
-  //position: absolute;
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 0;
+  }
 }
 
 .person-parameters__purpose-list input {
   appearance: none;
-  positizon: absolute;
-}
-
-.person-parameters__purpose__custom-checkbox {
-  display: flex;
-  align-items: center;
-}
-
-
-.person-parameters__purpose__custom--checkbox::before {
-  content: "";
-  display: flex;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: $line-gray-contacts;
-  position: relative;
-  background-color: transparent;
-}
-
-.person-parameters__purpose__custom--checkbox-checked:checked + .person-parameters__label::before {
-  content: "";
-  display: flex;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: $basic-black;
-  position: relative;
-}
-
-//15
-//.person-parameters__purpose__custom-checkbox--checked:checked + .person-parameters__label::before {
-//
-//  content: "";
-//  display: flex;
-//  width: 18px;
-//  height: 18px;
-//  border-radius: 50%;
-//  background-color: $basic-black;
-//  position: relative;
-//margin-top: 15px;
-//right: 0px;
-//justify-content: center;
-//}
-
-.person-parameters__purpose-list li {
-  margin-bottom: 19px;
+  position: absolute;
 }
 
 .person-parameters__label {
+  display: inline-block;
+  position: relative;
   color: $special-medium-dark-grey-light;
+  padding-left: 100px;
 
-  @media (min-width: $mobile-width-only) {
-    margin-left: 100px;
+  @media (max-width: $mobile-width-only) {
+    padding-left: 45px;
   }
+}
+
+.person-parameters__label::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: $line-gray;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+
+  @media (max-width: $mobile-width-only) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.person-parameters__purpose-list input:focus-within + .person-parameters__label::before {
+  outline: 1px solid #68b738;
+  border-radius: 50%;
+}
+
+.person-parameters__purpose-custom-checkbox-checked:checked + .person-parameters__label::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: #111111;
+  display: inline-flex;
+  position: absolute;
+  border-radius: 50%;
+  left: 11px;
+  top: 11px;
+
+  @media (max-width: $mobile-width-only) {
+    width: 14px;
+    height: 14px;
+    left: 8px;
+    top: 8px;
+  }
+}
+
+.person-parameters__purpose-list li {
+  margin-bottom: 19px;
 }
 
 .person-parameters__form input::placeholder,
