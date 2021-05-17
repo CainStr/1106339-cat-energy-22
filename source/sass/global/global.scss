@@ -43,13 +43,6 @@ a {
   border: 0;
 }
 
-.button {
-  padding: 0;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-}
-
 .style-title {
   @include oswald(36px, 40px);
   font-weight: inherit;

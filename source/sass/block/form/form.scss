@@ -1,0 +1,186 @@
+.form__fieldset {
+  padding: 0;
+}
+
+.form__item {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+  }
+}
+
+.form__label {
+  color: $special-medium-dark-grey;
+  margin-right: 13px;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(20px, 30px);
+    color: $special-medium-dark-grey;
+  }
+}
+
+.form__input {
+  border: 1px solid $form-border;
+  padding: 13px 15px;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(20px, 30px);
+    color: $special-medium-dark-grey;
+  }
+}
+
+
+.form__list-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.form__item--purpose {
+  @media (min-width: $tablet-width) {
+    border: 1px solid $form-border;
+    padding: 30px 30px;
+  }
+}
+
+.form__list-item--purpose {
+  position: relative;
+  display: flex;
+  padding-top: 10px;
+}
+
+.form__list--purpose {
+  display: inline-grid;
+  margin-left: 45px;
+}
+
+.form__purpose-label {
+  display: flex;
+  margin-bottom: 19px;
+}
+
+.form__purpose-radio {
+  appearance: none;
+}
+
+.form__purpose-radio::before {
+  content: "";
+  border: 1px solid $special-gray;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -45px;
+  top: 4px;
+
+  @media (min-width: $tablet-width) {
+    left: 0;
+
+  }
+}
+
+.form__purpose-radio:checked + .form__purpose-label::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: $basic-green;
+  border-radius: 50%;
+  left: -37px;
+  top: 12px;
+}
+
+.form__title {
+  @include oswald(24px, 26px);
+}
+
+.form__title--contacts {
+  margin-bottom: 35px;
+  display: block;
+  padding-right: 50px;
+}
+
+.form__list-item--textarea {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-row-gap: 38px;
+}
+
+.form__textarea {
+  grid-area: 2/1;
+  resize: none;
+  width: 280px;
+  min-height: 150px;
+  border: 1px solid $form-border;
+  padding: 10px 13px;
+  text-transform: uppercase;
+}
+
+.form__title--optional {
+  margin-bottom: 34px;
+}
+
+.form__list-item--optional {
+  margin-bottom: 20px;
+  position: relative;
+
+}
+
+.form__checkbox {
+  appearance: none;
+}
+
+.form__checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $form-border;
+  margin-right: 18px;
+  //position: relative;
+
+}
+
+.form__label-optional {
+  display: flex;
+  align-items: center;
+}
+
+.form__checkbox:checked + .form__label-optional::before {
+  content: url("../img/ok.svg");
+  position: absolute;
+  top: 7px;
+  left: 6px;
+}
+
+.form__button {
+  width: 100%;
+  margin-bottom: 21px;
+}
+
+.form__required-field {
+  @include arial(14px, 16px);
+  text-align: center;
+  text-transform: none;
+}
+
+.form__item-addition {
+  margin-bottom: 30px;
+}

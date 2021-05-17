@@ -1,7 +1,16 @@
 .button {
-  display: block;
-  width: 280px;
-  height: 40px;
-  background-color: $basic-green;
-  color: $white;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &--primary {
+    display: block;
+    padding: 10px 25px 7px;
+
+    @include oswald(14px, 18px);
+    background-color: $basic-green;
+    color: $white;
+    text-transform: uppercase;
+  }
 }

@@ -42,7 +42,6 @@
 }
 
 .about-us__address {
-  display: flex;
   width: 160px;
   text-align: right;
 
@@ -50,6 +49,10 @@
   font-style: normal;
   color: $special-medium-dark-grey;
   text-transform: none;
+
+  @media (max-width: $mobile-width-only) {
+    text-align: left;
+  }
 
   @media (min-width: $desktop-width) {
     @include arial(16px, 20px);

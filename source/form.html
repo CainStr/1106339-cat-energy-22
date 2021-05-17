@@ -17,9 +17,9 @@
   </div>
   <nav class="navigation">
     <ul class="navigation__list navigation__list--form-desktop list">
-      <li><a href="index.html">ГЛАВНАЯ</a></li>
-      <li><a href="catalog.html">КАТАЛОГ ПРОДУКЦИИ</a></li>
-      <li><a>ПОДБОР ПРОГРАММЫ</a></li>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Каталог продукции</a></li>
+      <li><a>Подбор прграммы</a></li>
     </ul>
   </nav>
 </header>
@@ -30,87 +30,86 @@
   <section class="person-parameters container">
     <h2 class="person-parameters__title">Подбор программы</h2>
     <p class="person-parameters__subtitle">Заполните анкету, и мы поберем <br> программу питания для вашего кота</p>
-    <form class="placeholder-style person-parameters__form" method="post" action="https://echo.htmlacademy.ru">
-      <div class="person-parameters__item-position">
-        <fieldset class="person-parameters__item">
-          <ul class="person-parameters__item-list list">
-            <li>
-              <label class="person-parameters__item-label person-parameters__name" for="cat-name">имя:*
-              </label>
-              <input class="person-parameters__item-input" type="text" name="cat-name" id="cat-name"  placeholder="БАРСИК">
+    <form class="form person-parameters__form" method="post" action="https://echo.htmlacademy.ru">
+      <div class="form__container">
+        <fieldset class="form__item">
+          <ul class="form__list list">
+            <li class="form__list-item">
+              <label class="form__label" for="cat-name">имя:*</label>
+              <input class="form__input" type="text" name="cat-name" id="cat-name"  placeholder="Барсик">
             </li>
-            <li>
-              <label class="person-parameters__item-label person-parameters__weight" for="cat-weight">вес (кг):*
+            <li class="form__list-item">
+              <label class="form__label" for="cat-weight">вес (кг):*
               </label>
-              <input class="person-parameters__item-input" type="text" name="cat-weight" id="cat-weight" placeholder="7">
+              <input class="form__input" type="text" name="cat-weight" id="cat-weight" placeholder="7">
             </li>
-            <li>
-              <label class="person-parameters__item-label person-parameters__age" for="cat-age">возраст (лет):
+            <li class="form__list-item">
+              <label class="form__label" for="cat-age">возраст (лет):
               </label>
-              <input class="person-parameters__item-input" type="text" name="cat-age" id="cat-age" placeholder="7">
+              <input class="form__input" type="text" name="cat-age" id="cat-age" placeholder="7">
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="person-parameters__purpose">
-          <ul class="person-parameters__purpose-list list">
-            <li class="person-parameters__purpose-custom-checkbox">
-              <input class="person-parameters__purpose-custom-checkbox-checked" type="radio" value="weight-loss" name="radio-mass" id="weight-loss" checked>
-              <label class="person-parameters__label" for="weight-loss">похудение</label>
+        <fieldset class="form__item  form__item--purpose">
+          <ul class="form__list form__list--purpose list">
+            <li class="form__list-item  form__list-item--purpose">
+              <input class=" form__purpose-radio" type="radio" value="weight-loss" name="radio-mass" id="weight-loss" checked>
+              <label class="form__purpose-label" for="weight-loss">похудение</label>
             </li>
-            <li class="person-parameters__purpose-custom-checkbox">
-              <input class="person-parameters__purpose-custom-checkbox-checked" type="radio" value="weight-gain" name="radio-mass" id="weight-gain">
-              <label class="person-parameters__label" for="weight-gain">набор массы</label>
+            <li class="form__list-item  form__list-item--purpose">
+              <input class="form__purpose-radio" type="radio" value="weight-gain" name="radio-mass" id="weight-gain">
+              <label class="form__purpose-label" for="weight-gain">набор массы</label>
             </li>
-            <li class="person-parameters__purpose-custom-checkbox">
-              <input class="person-parameters__purpose-custom-checkbox-checked" type="radio" value="need-some-advice" name="radio-mass" id="need-some-advice">
-              <label class="person-parameters__label" for="need-some-advice">не знаю (нужен ваш совет)</label>
+            <li class="form__list-item  form__list-item--purpose">
+              <input class=" form__purpose-radio" type="radio" value="need-some-advice" name="radio-mass" id="need-some-advice">
+              <label class="form__purpose-label" for="need-some-advice">не знаю (нужен ваш совет)</label>
             </li>
           </ul>
         </fieldset>
       </div>
-      <fieldset class="person-parameters__contacts">
-        <legend class="person-parameters__optional-title green-line green-line--contacts"> Контактные данные (владелец кота)</legend>
-        <ul class="person-parameters__contacts-list list">
-          <li class="person-parameters__email person-parameters__contacts-list-item">
-            <label  for="person-email">E-mail:*</label>
-            <input class="person-parameters__email-input" type="email" name="person-email" id="person-email" placeholder="kuklachev@gmail.com">
+      <fieldset class="form__item form__item--contacts">
+        <legend class="form__title form__title--contacts green-line green-line--contacts"> Контактные данные (владелец кота)</legend>
+        <ul class="form__list form__list--contacts list">
+          <li class="form__list-item  form__list-item--contacts">
+            <label class="form__contacts-label form__label" for="person-email">E-mail:*</label>
+            <input class="form__contacts-input form__input" type="email" name="person-email" id="person-email" placeholder="kuklachev@gmail.com">
           </li>
-          <li class="person-parameters__telephone person-parameters__contacts-list-item">
-            <label  for="person-telephone">Телефон:*</label>
-              <input class="person-parameters__telephone-input" type="tel" name="person-telephone" id="person-telephone" placeholder="8 (960) 900-60-90">
+          <li class="form__list-item  form__list-item--contacts">
+            <label  class="form__contacts-label form__label" for="person-telephone">Телефон:*</label>
+              <input class="form__contacts-input form__input" type="tel" name="person-telephone" id="person-telephone" placeholder="8 (960) 900-60-90">
           </li>
-          <li class="person-parameters__comment-block">
-            <label class="person-parameters__optional-title green-line" for="person-parameters__comment">Комментарий</label>
-            <textarea class="person-parameters__comment" name="person-parameters__comment" placeholder="Расскажите обо всех повадках кота" id="person-parameters__comment"></textarea>
+          <li class="form__list-item form__list-item--contacts form__list-item--textarea">
+            <label class="form__title form__contacts-label form__label green-line" for="person-parameters__comment">Комментарий</label>
+            <textarea class="form__textarea" name="person-parameters__comment" placeholder="Расскажите обо всех повадках кота" id="person-parameters__comment"></textarea>
           </li>
         </ul>
       </fieldset>
 
-      <fieldset class="person-parameters__optional">
-        <legend class="person-parameters__optional-title green-line">Дополнительно</legend>
-        <ul class="person-parameters__optional-list list">
-          <li>
-            <input class="person-parameters__optional-input-checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
-            <label class="person-parameters__optional-label" for="sweetener">сахарозаменитель</label>
+      <fieldset class="form__item form__item--optional">
+        <legend class="form__title form__title--optional green-line">Дополнительно</legend>
+         <ul class="form__list form__list--optional list">
+          <li class="form__list-item form__list-item--optional">
+            <input class=" form__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+            <label class="form__label form__label-optional" for="sweetener">сахарозаменитель</label>
           </li>
-          <li>
-            <input class="person-parameters__optional-input-checkbox" type="checkbox" name="drinking-water" id="drinking-water">
-            <label class="person-parameters__optional-label" for="drinking-water">питьевая вода</label>
+          <li class="form__list-item form__list-item--optional">
+            <input class=" form__checkbox" type="checkbox" name="drinking-water" id="drinking-water">
+            <label class="form__label form__label-optional" for="drinking-water">питьевая вода</label>
           </li>
-          <li>
-            <input class="person-parameters__optional-input-checkbox" type="checkbox" name="milk" id="milk">
-            <label class="person-parameters__optional-label" for="milk">молоко</label>
+          <li class="form__list-item form__list-item--optional">
+            <input class=" form__checkbox" type="checkbox" name="milk" id="milk">
+            <label class="form__label form__label-optional" for="milk">молоко</label>
           </li>
-          <li>
-            <input class="person-parameters__optional-input-checkbox" type="checkbox" name="vitamins" id="vitamins">
-            <label class="person-parameters__optional-label" for="vitamins">витамины</label>
+          <li class="form__list-item form__list-item--optional">
+            <input class=" form__checkbox" type="checkbox" name="vitamins" id="vitamins">
+            <label class="form__label form__label-optional" for="vitamins">витамины</label>
           </li>
         </ul>
       </fieldset>
-      <div class="person-parameters__optional-addition">
-        <button class="person-parameters__optional-button button" type="submit" value="Данные владельца и его питомца">отправить заявку</button>
-        <p class="person-parameters__required-field">* — Обязательные поля</p>
+      <div class="form__item form__item-addition">
+        <button class="form__button button--primary button" type="submit" value="Данные владельца и его питомца">отправить заявку</button>
+        <p class="form__required-field">* — Обязательные поля</p>
       </div>
     </form>
   </section>
