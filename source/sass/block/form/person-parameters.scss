@@ -151,8 +151,6 @@
 }
 
 
-
-
 .person-parameters__comment-block {
   grid-area: person-parameters__comment-block;
   background-color: white;
@@ -167,6 +165,8 @@
 }
 
 .person-parameters__optional-list {
+  position: relative;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(auto-fill, 221px);
@@ -175,6 +175,54 @@
 
   @media (min-width: $desktop-width) {
     grid-column-gap: 100px;
+  }
+}
+
+.person-parameters__optional-input-checkbox {
+  appearance: none;
+  position: absolute;
+}
+
+.person-parameters__optional-label {
+  margin-left: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 63px;
+  }
+}
+
+.person-parameters__optional-input-checkbox + .person-parameters__optional-label::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 1px solid $special-gray;
+  display: block;
+  position: absolute;
+  left: -50px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: -63px;
+  }
+}
+
+.person-parameters__optional-input-checkbox:checked + .person-parameters__optional-label::after {
+  content: url("../img/ok.svg");
+  //width: 10px;
+  //height: 10px;
+  //display: block;
+  position: absolute;
+  left: -44px;
+  top: 1px;
+
+  @media (min-width: $tablet-width) {
+    left: -52px;
+    top:-2px
   }
 }
 
