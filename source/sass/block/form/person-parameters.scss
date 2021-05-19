@@ -1,3 +1,13 @@
+.person-parameters__wrapper {
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
+}
+
 .person-parameters__title {
   margin: 0;
   padding: 0;

@@ -1,10 +1,19 @@
 .about-us {
+  background-color: $basic-gray;
+}
+
+.about-us__wrapper {
   display: flex;
   align-items: center;
   position: relative;
+  min-height: 114px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+    padding: 0 70px;
+  }
 
   @media (min-width: $desktop-width) {
-    display: flex;
     background-color: $white;
     width: 570px;
     position: absolute;
@@ -12,21 +21,22 @@
     margin-top: 60px;
     padding: 62px 89px 51px 76px;
     justify-content: center;
-    margin-left: 110px;
+    left: calc(50% - 610px);
   }
 }
 
-.about-us::after {
-  @media (max-width: $desktop-width) {
-    content: "";
-    background-color: $basic-gray;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    left: 0;
-  }
-}
+
+//.about-us::after {
+//  @media (max-width: $desktop-width) {
+//    content: "";
+//    background-color: $basic-gray;
+//    width: 100%;
+//    height: 100%;
+//    position: absolute;
+//    z-index: -1;
+//    left: 0;
+//  }
+//}
 
 .about-us__title {
   width: 171px;
@@ -64,5 +74,11 @@
 .about-us__address-br {
   @media (min-width: $desktop-width) {
     margin-bottom: 10px;
+  }
+}
+
+.form__required-field {
+  @media (min-width: $tablet-width) {
+    @include oswald(16px, 16px);
   }
 }
