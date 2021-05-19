@@ -1,5 +1,8 @@
 .example {
   background-color: $background-gray;
+}
+
+.example__content {
   display: grid;
   grid-template-areas: "example__title example__title"
     "example__subtitle example__subtitle"

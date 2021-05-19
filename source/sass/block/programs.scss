@@ -16,12 +16,10 @@
 }
 
 .programs__title--cat-sit::after {
-  content: url("../img/programs__title--cat-sit.svg");
-  position: absolute;
-  right: 0;
-
   @media (min-width: $tablet-width) {
-    content: none;
+    content: url("../img/programs__title--cat-sit.svg");
+    position: absolute;
+    right: 0;
   }
 }
 
