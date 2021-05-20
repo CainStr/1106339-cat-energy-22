@@ -1,25 +1,51 @@
+.programs__list {
+  margin-bottom: 27px;
+}
+
 .programs__item {
   background-color: $basic-gray;
-  margin-top: 30px;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 21px 22px;
+  }
 
   @media (min-width: $tablet-width) {
     display: block;
-    padding: 47px 280px 53px 52px;
+    padding: 77px 280px 59px 52px;
     position: relative;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 47px 61px 33px 52px;
+    padding: 77px 51px 33px 52px;
     display: block;
-    width: 570px;
+    max-width: 570px;
   }
 }
+
+.programs__item:not(:last-child) {
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
 
 .programs__title--cat-sit::after {
   @media (min-width: $tablet-width) {
     content: url("../img/programs__title--cat-sit.svg");
     position: absolute;
     right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
@@ -33,8 +59,17 @@
 }
 
 .programs__title {
+  margin: 0;
+  position: relative;
+
   @include oswald(24px, 37px);
   text-align: center;
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 78px;
+    text-align: left;
+    padding-bottom: 29px;
+  }
 
   @media (min-width: $tablet-width) {
     text-align: left;
@@ -52,21 +87,24 @@
 
 .programs__title--cat-sit::before {
   content: url("../img/programs__title--cat-sit.svg");
+  left: 0;
 }
 
 .programs__title--cat-goes::before {
   content: url("../img/programs__title--cat-goes.svg");
+  left: -5px;
 }
 
 .programs__title--cat-sit::before,
 .programs__title--cat-goes::before {
+  position: absolute;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
-    position: absolute;
     left: 0;
   }
 }
@@ -74,18 +112,23 @@
 .programs__subtitle {
   @include arial;
   color: $special-medium-dark-grey;
-}
 
-.programs__subtitle::after {
-  content: "";
-  display: block;
-  width: calc(100% - 40px);
-  height: 1px;
-  background-color: $color-line-gray;
+  @media (max-width: $mobile-width-only) {
+    margin: 0;
+    padding-bottom: 23px;
+    border-bottom: 1px solid $color-line-gray;
+    max-width: calc(100% - 40px);
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+.programs__button {
+  display: block;
+  padding-top: 15px;
+  padding-right: 50px;
 }
 
 .programs__button::after {

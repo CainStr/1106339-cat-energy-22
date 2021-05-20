@@ -1,16 +1,21 @@
 .program-selection {
   margin-bottom: 100px;
-  background-image: url("../img/program-selection__cat.jpg");
+  //background-color: $basic-green;
+  background-image: url("../img/program-selection__cat.jpg"), linear-gradient(to bottom, $basic-green-opacity, $basic-green-opacity);
   background-repeat: no-repeat;
+  background-size: auto 302px;
+  background-position: top center;
+  text-align: center;
+
 
   &__title {
     @include oswald(36px, 36px);
     color: $white;
     padding-top: 27px;
-    width: 250px;
+    max-width: 250px;
+    margin: 0 auto;
   }
 }
-
 
 .program-selection__subtitle {
   @include oswald($lh: 14px);

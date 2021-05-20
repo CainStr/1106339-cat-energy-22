@@ -46,9 +46,5 @@ a {
 .style-title {
   @include oswald(36px, 40px);
   font-weight: inherit;
-  padding-top: 27px;
+  margin: 0;
 }
-
-//.form__list-item input{
-//  visibility: hidden;
-//}

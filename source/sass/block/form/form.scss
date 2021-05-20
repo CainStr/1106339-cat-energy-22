@@ -26,6 +26,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 72px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .form__list-item--user {
@@ -94,6 +98,7 @@
   @media (min-width: $desktop-width) {
     align-items: center;
     display: flex;
+    margin-bottom: 0;
   }
 }
 
@@ -190,14 +195,16 @@
 .form__list--contacts {
   @media (min-width: $desktop-width) {
     display: grid;
+    grid-template-columns: repeat(auto-fill, auto);
+    grid-template-rows: repeat(auto-fill, auto);
     grid-template-areas: "form__list-item--email form__list-item--tel" "form__list-item--textarea form__list-item--textarea";
     grid-column-gap: 78px;
+    grid-row-gap: 62px;
   }
 }
 
 .form__label--comment {
   @media (min-width: $desktop-width) {
-    margin-top: 70px;
     margin-bottom: 76px;
   }
 }

@@ -2,13 +2,13 @@
   grid-area: main-header;
   display: grid;
 
-  @media (max-width: $mobile-width-only) {
-    margin-bottom: 45px;
-  }
+  //@media (max-width: $mobile-width-only) {
+  //  padding-bottom: 27px;
+  //}
 
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
-    margin-bottom: 65px;
+    padding-bottom: 65px;
   }
 }

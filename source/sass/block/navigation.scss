@@ -2,11 +2,12 @@
   @include oswald(20px, 20px, 500);
   text-transform: uppercase;
 
-  //@media (max-width: $mobile-width-only) {
-  //  display: flex;
-  //  min-height: 66px;
-  //  text-align: center;
-  //}
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+    padding: 22px 15px 24px;
+    justify-content: center;
+    border-bottom: 1px solid $basic-gray;
+  }
 
   @media (min-width: $tablet-width) {
     @include oswald(18px, 24px);
@@ -16,18 +17,22 @@
     @include oswald(20px, 30px);
     color: $white;
   }
+
+  //&::before {
+  //
+  //}
 }
 
-.navigation__list a::before {
-  @media (max-width: $mobile-width-only) {
-    content: "";
-    position: absolute;
-    width: 100%;
-    left: 0;
-    border-top: 1px solid $special-gray;
-    margin-top: 40px;
-  }
-}
+//.navigation__list a::before {
+//  @media (max-width: $mobile-width-only) {
+//    content: "";
+//    position: absolute;
+//    width: 100%;
+//    left: 0;
+//    border-top: 1px solid $special-gray;
+//    margin-top: 40px;
+//  }
+//}
 
 .navigation__list--form-desktop a {
   color: $basic-black;
