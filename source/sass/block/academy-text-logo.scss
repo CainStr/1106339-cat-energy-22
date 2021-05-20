@@ -1,3 +1,7 @@
 .academy-text-logo {
   grid-area: academy-text-logo;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

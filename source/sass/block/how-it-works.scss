@@ -1,3 +1,14 @@
+
+.how-it-works {
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 22px;
+  }
+}
+
+.style-title {
+  padding-bottom: 38px;
+}
+
 .how-it-works__item {
   @include arial;
   color: $special-medium-dark-grey;
@@ -28,6 +39,10 @@
 .how-it-works__item-text {
   margin-left: 20px;
 
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 24px;
+  }
+
   @media (min-width: $tablet-width) {
     margin-left: 0;
     margin-top: 91px;
@@ -54,8 +69,13 @@
 }
 
 .how-it-works__item::after {
-  @media (min-width: $tablet-width) {
+  //font-family: "Oswald";
+  //font-size: 280px;
+  //line-height: 280px;
 
+  @include oswald(280px, 280px);
+
+  @media (min-width: $tablet-width) {
     content: counter(numbers-pic);
     counter-increment: numbers-pic;
     color: $basic-gray;
@@ -63,7 +83,5 @@
     top: -30px;
     left: 70px;
     position: absolute;
-
-    @include oswald(280px, 280px);
   }
 }

@@ -1,220 +1,375 @@
-.person-parameters__form fieldset {
-  border: none;
-  padding: 0;
-}
+.person-parameters__wrapper {
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+  }
 
-.person-parameters__item ul,
-.person-parameters__purpose ul {
-  @media (max-width: $mobile-width-only) {
-    border-bottom: $line-gray;
-    padding-bottom: 30px;
-    margin-top: 30px;
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
   }
 }
 
 .person-parameters__title {
-  @include oswald(36px, 36px);
-  text-transform: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 37px;
 
   @media (min-width: $tablet-width) {
     @include oswald(60px, 60px);
-  }
-}
-
-.person-parameters__item-list li {
-  margin-bottom: 41px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-}
-
-.person-parameters__item-position {
-  @media (min-width: $desktop-width) {
-    display: flex;
+    margin-bottom: 54px;
   }
 }
 
 .person-parameters__subtitle {
-  text-transform: uppercase;
-}
-
-.person-parameters__item-label {
-  color: $special-medium-dark-grey;
-}
-
-.person-parameters__item-input {
-  margin-left: 13px;
-  border: 1px solid $form-border;
-  padding: 10px 20px 11px 20px;
-}
-
-.person-parameters__item-input::placeholder {
-  padding-left: 10px;
-  align-items: center;
-}
-
-.person-parameters__subtitle,
-.person-parameters__item-label,
-.person-parameters__form input::placeholder,
-.person-parameters__label,
-.person-parameters__optional-list {
   @media (min-width: $tablet-width) {
     @include oswald(20px, 30px);
+    text-transform: uppercase;
+    margin-bottom: 66px;
   }
 }
 
-.person-parameters__contacts legend {
-  @media (max-width: $mobile-width-only) {
-    width: 242px;
-  }
-}
-
-.person-parameters__contacts-list {
-  @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "person-parameters__email person-parameters__telephone"
-      "person-parameters__comment-block person-parameters__comment-block";
-    grid-column-gap: 40px;
-  }
-}
-
-.person-parameters__email {
-  grid-area: person-parameters__email;
-}
-
-.person-parameters__telephone {
-  grid-area: person-parameters__telephone;
-}
-
-.person-parameters__email-input,
-.person-telephone__input {
-  border: $line-gray-contacts;
-}
-
-.person-parameters__contacts-list-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  margin-bottom: 14px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
-  }
-}
-
-
-.person-parameters__comment-block {
-  grid-area: person-parameters__comment-block;
-  background-color: white;
-
-  @media (max-width: $mobile-width-only) {
-    width: 150px;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 202px;
-  }
-}
-
-.person-parameters__optional-list {
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 221px);
-    grid-column-gap: 124px;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-column-gap: 100px;
-  }
-}
-
-.person-parameters__optional-addition {
-  @media (min-width: $tablet-width) {
-    display: flex;
-  }
-}
-
-.person-parameters__optional-button {
-  @include oswald(16px, 20px);
-  text-transform: uppercase;
-
-  @media (min-width: $tablet-width) {
-    margin-right: 84px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-right: 54px;
-  }
-}
-
-.person-parameters__optional-title {
-  @include oswald(24px, 26px);
-  text-transform: none;
-  background-color: $white;
-  display: block;
-  padding: 0;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-bottom: 30px;
-  margin-left: -30px;
-
-
-  @media (min-width: $tablet-width) {
-    @include oswald(36px, 36px);
-  }
-}
-
-
-.green-line::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  display: block;
-  flex-grow: 1;
-  width: 100%;
-  height: 5px;
-  background-color: $basic-green;
-  left: 0;
-  margin-top: -15px;
-
-  @media (max-width: $mobile-width-only) {
-    left: inherit;
-  }
-}
-
-.green-line--contacts::after {
-  @media (max-width: $mobile-width-only) {
-    margin-top: -40px;
-  }
-}
-
-.person-parameters__label {
-  color: $special-medium-dark-grey-light;
-}
-
-.person-parameters__form input::placeholder,
-.person-parameters__comment::placeholder {
-  color: $special-medium-dark-grey;
-}
-
-.person-parameters__comment {
-  resize: none;
-  width: 280px;
-  min-height: 150px;
-
-  @media (min-width: $tablet-width) {
-    width: 631px;
-    min-height: 174px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 1220px;
-    min-height: 174px;
-  }
-}
-
-.person-parameters__required-field {
-  @include arial($lh: 16px);
-  text-transform: none;
-}
+//.person-parameters__item,
+//.person-parameters__contacts,
+//.person-parameters__optional {
+//  border: none;
+//}
+//
+//
+//
+//.person-parameters__purpose {
+//  margin-left: auto;
+//  display: block;
+//  border: $line-gray-contacts;
+//
+//  @media (max-width: $mobile-width-only) {
+//    border-left: none;
+//    border-right: none;
+//  }
+//
+//  @media (min-width: $tablet-width) {
+//    margin-left: 0;
+//    width: 568px;
+//  }
+//
+//  @media (min-width: $desktop-width) {
+//    //margin-left: auto;
+//    min-height: 200px;
+//  }
+//}
+//
+//.person-parameters__title {
+//  @include oswald(36px, 36px);
+//  text-transform: none;
+//
+//  @media (min-width: $tablet-width) {
+//    @include oswald(60px, 60px);
+//  }
+//}
+//
+//.person-parameters__item-list li {
+//  //margin-bottom: 41px;
+//  display: grid;
+//  grid-template-columns: auto 1fr;
+//  align-items: center;
+//
+//  @media (max-width: $mobile-width-only) {
+//    margin-bottom: 13px;
+//  }
+//
+//  @media (min-width: $tablet-width) {
+//    margin-bottom: 20px;
+//  }
+//}
+//
+//.form__item {
+//  @media (min-width: $desktop-width) {
+//    display: grid;
+//    grid-template-columns: 1fr 1fr;
+//    grid-column-gap: 80px;
+//  }
+//}
+//
+//.person-parameters__subtitle {
+//  text-transform: uppercase;
+//}
+//
+//.person-parameters__item-label {
+//  color: $special-medium-dark-grey;
+//}
+//
+//.person-parameters__item-input {
+//  margin-left: 13px;
+//  border: 1px solid $form-border;
+//  padding: 10px 20px 11px 20px;
+//}
+//
+//.person-parameters__item-input::placeholder {
+//  padding-left: 10px;
+//  align-items: center;
+//}
+//
+//.person-parameters__contacts legend {
+//  @media (max-width: $mobile-width-only) {
+//    width: 242px;
+//  }
+//}
+//
+//.person-parameters__contacts-list {
+//  @media (min-width: $desktop-width) {
+//    display: grid;
+//    grid-template-columns: 1fr 1fr;
+//    grid-template-rows: auto auto;
+//    grid-template-areas: "person-parameters__email person-parameters__telephone"
+//      "person-parameters__comment-block person-parameters__comment-block";
+//    grid-column-gap: 80px;
+//  }
+//}
+//
+//.person-parameters__email {
+//  grid-area: person-parameters__email;
+//}
+//
+//.person-parameters__telephone {
+//  grid-area: person-parameters__telephone;
+//}
+//
+//
+//.person-parameters__contacts-list-item {
+//  display: grid;
+//  grid-template-columns: auto 1fr;
+//  margin-bottom: 14px;
+//  align-items: center;
+//}
+//
+//.person-parameters__email-input,
+//.person-parameters__telephone-input {
+//  border: 1px solid $form-border;
+//  margin-left: 13px;
+//  padding: 10px 20px;
+//  display: flex;
+//}
+//
+//
+//.person-parameters__comment-block {
+//  grid-area: person-parameters__comment-block;
+//  background-color: white;
+//
+//  @media (max-width: $mobile-width-only) {
+//    width: 150px;
+//  }
+//
+//  @media (min-width: $tablet-width) {
+//    width: 202px;
+//  }
+//}
+//
+//.person-parameters__optional-list {
+//  position: relative;
+//
+//  @media (min-width: $tablet-width) {
+//    display: grid;
+//    grid-template-columns: repeat(auto-fill, 221px);
+//    grid-column-gap: 124px;
+//  }
+//
+//  @media (min-width: $desktop-width) {
+//    grid-column-gap: 100px;
+//  }
+//}
+//
+//.person-parameters__optional-input-checkbox {
+//  appearance: none;
+//  position: absolute;
+//}
+//
+//.person-parameters__optional-label {
+//  margin-left: 50px;
+//  margin-bottom: 20px;
+//  display: flex;
+//  align-items: center;
+//  position: relative;
+//
+//  @media (min-width: $tablet-width) {
+//    margin-left: 63px;
+//  }
+//}
+//
+//.person-parameters__optional-input-checkbox + .person-parameters__optional-label::before {
+//  content: "";
+//  width: 30px;
+//  height: 30px;
+//  border: 1px solid $special-gray;
+//  display: block;
+//  position: absolute;
+//  left: -50px;
+//
+//  @media (min-width: $tablet-width) {
+//    width: 40px;
+//    height: 40px;
+//    left: -63px;
+//  }
+//}
+//
+//.person-parameters__optional-input-checkbox:checked + .person-parameters__optional-label::after {
+//  content: url("../img/ok.svg");
+//  position: absolute;
+//  left: -44px;
+//  top: 1px;
+//
+//  @media (min-width: $tablet-width) {
+//    left: -52px;
+//    top: -2px;
+//  }
+//}
+//
+//.person-parameters__optional-addition {
+//  @media (min-width: $tablet-width) {
+//    display: flex;
+//  }
+//}
+//
+//.person-parameters__optional-button {
+//  @include oswald(16px, 20px);
+//  text-transform: uppercase;
+//
+//  @media (min-width: $tablet-width) {
+//    margin-right: 84px;
+//  }
+//
+//  @media (min-width: $desktop-width) {
+//    margin-right: 54px;
+//  }
+//}
+//
+//.person-parameters__optional-title {
+//  @include oswald(24px, 26px);
+//  text-transform: none;
+//  background-color: $white;
+//  display: block;
+//  padding: 0;
+//  padding-left: 30px;
+//  padding-right: 30px;
+//  margin-bottom: 30px;
+//  margin-left: -30px;
+//
+//  @media (min-width: $tablet-width) {
+//    @include oswald(36px, 36px);
+//  }
+//}
+//
+//.green-line::after {
+//  content: "";
+//  position: absolute;
+//  z-index: -1;
+//  display: block;
+//  width: 100vw;
+//  height: 5px;
+//  background-color: $basic-green;
+//  left: 0;
+//  margin-top: -15px;
+//
+//  @media (max-width: $mobile-width-only) {
+//    left: inherit;
+//  }
+//}
+//
+//.green-line--contacts::after {
+//  @media (max-width: $mobile-width-only) {
+//    margin-top: -40px;
+//  }
+//}
+//
+//.person-parameters__purpose-list {
+//  padding: 25px 28px;
+//  display: grid;
+//  align-items: center;
+//
+//  @media (max-width: $mobile-width-only) {
+//    padding-left: 0;
+//  }
+//}
+//
+//.person-parameters__purpose-list input {
+//  appearance: none;
+//  position: absolute;
+//}
+//
+//.person-parameters__label {
+//  display: inline-block;
+//  position: relative;
+//  color: $special-medium-dark-grey-light;
+//  padding-left: 100px;
+//
+//  @media (max-width: $mobile-width-only) {
+//    padding-left: 45px;
+//  }
+//}
+//
+//.person-parameters__label::before {
+//  content: "";
+//  width: 40px;
+//  height: 40px;
+//  border: $line-gray;
+//  border-radius: 50%;
+//  display: inline-block;
+//  position: absolute;
+//  left: 0;
+//
+//  @media (max-width: $mobile-width-only) {
+//    width: 30px;
+//    height: 30px;
+//  }
+//}
+//
+//.person-parameters__purpose-list input:focus-within + .person-parameters__label::before {
+//  outline: 1px solid #68b738;
+//  border-radius: 50%;
+//}
+//
+//.person-parameters__purpose-custom-checkbox-checked:checked + .person-parameters__label::after {
+//  content: "";
+//  width: 18px;
+//  height: 18px;
+//  background-color: #111111;
+//  display: inline-flex;
+//  position: absolute;
+//  border-radius: 50%;
+//  left: 11px;
+//  top: 11px;
+//
+//  @media (max-width: $mobile-width-only) {
+//    width: 14px;
+//    height: 14px;
+//    left: 8px;
+//    top: 8px;
+//  }
+//}
+//
+//.person-parameters__purpose-list li {
+//  margin-bottom: 19px;
+//}
+//
+//.person-parameters__form input::placeholder,
+//.person-parameters__comment::placeholder {
+//  color: $special-medium-dark-grey;
+//}
+//
+//.person-parameters__comment {
+//  resize: none;
+//  width: 280px;
+//  min-height: 150px;
+//
+//  @media (min-width: $tablet-width) {
+//    width: 631px;
+//    min-height: 174px;
+//  }
+//
+//  @media (min-width: $desktop-width) {
+//    width: 1220px;
+//    min-height: 174px;
+//  }
+//}
+//
+//.person-parameters__required-field {
+//  @include arial($lh: 16px);
+//  text-transform: none;
+//}
