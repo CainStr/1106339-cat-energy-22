@@ -119,10 +119,6 @@
     border-bottom: 1px solid $color-line-gray;
     max-width: calc(100% - 40px);
   }
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
 }
 
 .programs__button {

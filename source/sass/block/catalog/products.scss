@@ -41,7 +41,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 30px 35px  40px 40px ;
+    padding: 30px 35px  40px 40px;
   }
 }
 
@@ -115,8 +115,6 @@
     align-content: end;
   }
 }
-
-
 
 .products__catalog-title {
   @include oswald(36px, 36px);
