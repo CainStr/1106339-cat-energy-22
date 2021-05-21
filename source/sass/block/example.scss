@@ -3,6 +3,105 @@
   display: flex;
 }
 
+.example__content {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.example__splitter {
+  @media (min-width: $desktop-width) {
+    padding-right: 134px;
+  }
+}
+
+.example__splitter-coast {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    justify-content: space-between;
+  }
+}
+
+.example__button {
+  @include oswald(16px, 20px);
+  text-transform: uppercase;
+  border: none;
+  background-color: inherit;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(20px, 30px);
+  }
+}
+
+.example__buttons {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width-only) {
+    max-width: 217px;
+    justify-content: space-between;
+  }
+
+  &::after {
+    @media (max-width: $mobile-width-only) {
+      content: "";
+      display: block;
+      width: 85px;
+      height: 15px;
+      border: 1px solid $special-gray;
+      border-radius: 10px;
+      position: absolute;
+      top: 3px;
+      right: 70px;
+      background-color: $white;
+    }
+  }
+}
+
+.example__button--before {
+  &::after {
+    @media (max-width: $mobile-width-only) {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 7px;
+      background-color: $basic-green;
+      left: 70px;
+      top: 7px;
+      z-index: 2;
+      border-radius: 10px;
+    }
+  }
+}
+
+.example__button--after {
+  &::before {
+    @media (max-width: $mobile-width-only) {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 7px;
+      background-color: $basic-green;
+      right: 77px;
+      top: 7px;
+      z-index: 2;
+      border-radius: 10px;
+    }
+  }
+}
+
+
 //.example__about {
 //  @media (min-width: $desktop-width) {
 //    display: flex;
@@ -111,6 +210,7 @@
   @media (min-width: $desktop-width) {
     text-align: center;
     display: flex;
+    align-items: center;
   }
 }
 
@@ -125,8 +225,12 @@
 .example__cost-span {
   justify-content: left;
 
-  @media (min-width: $mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
     justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: auto;
   }
 }
 
