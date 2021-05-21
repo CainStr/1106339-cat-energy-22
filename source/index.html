@@ -10,28 +10,39 @@
 
 <body class="page">
 
-<header class="main-header container">
-  <div class="main-logo">
-    <a class="page__img" href="#"><img src="img/page__img.svg" width="34" height="38" alt="Логотип «Cat energy»"></a>
-    <a class="page__img-text" href="#"><img src="img/page__img-text.svg" width="101" height="18" alt="Текстовый логотип школы «HTML Academy»"></a>
+<header class="main-header main-header--background">
+  <div class="main-header__container container">
+    <div class="main-logo">
+      <a class="page__img" href="#">
+        <picture>
+          <img src="img/index/mobile/1x/logo-header.png" width="34" height="38" alt="Логотип «Cat energy»">
+        </picture>
+      </a>
+      <a class="page__img-text" href="#"><img src="img/index/mobile/m-text-logo.svg" width="101" height="18" alt="Текстовый логотип школы «HTML Academy»"></a>
+    </div>
+    <nav class="navigation">
+      <ul class="navigation__list list">
+        <li><a>Главная</a></li>
+        <li><a href="catalog.html">Каталог продукции</a></li>
+        <li><a href="form.html">Подбор программы</a></li>
+      </ul>
+    </nav>
   </div>
-  <nav class="navigation">
-    <ul class="navigation__list list">
-      <li><a>Главная</a></li>
-      <li><a href="catalog.html">Каталог продукции</a></li>
-      <li><a href="form.html">Подбор программы</a></li>
-    </ul>
-  </nav>
 </header>
 
 <main class="content ">
   <h1 class="visually-hidden">Магазин «Cat-energy»</h1>
   <section class="program-selection">
-    <div class="container container--promo">
+    <div class="program-selection__container container">
       <h2 class="visually-hidden">Блок выбора программы</h2>
       <p class="program-selection__title">Функциональное питание для котов</p>
       <p class="program-selection__subtitle">занялся собой?займись котом!</p>
-      <img class="program-selection__img" src="img/program-selection__package.png" width="280" height="270" alt="Упаковка питания «Cat energy курица»">
+      <picture class="program-selection__img">
+        <source media="min-width: 768px"
+                srcset="img/index/tablet/1x/t-promo-logo.png 1x, img/index/tablet/2x/t-promo-logo2x.png 2x">
+        <img src="img/index/mobile/1x/promo-logo.png"
+                srcset="img/index/mobile/2x/promo-mobile2x.png 2x" width="280" height="270" alt="Упаковка питания «Cat energy курица»">
+      </picture>
       <a href="form.html" class="button button--primary program-selection__button">Подобрать программу</a>
     </div>
   </section>
@@ -83,41 +94,53 @@
     <h2 class="visually-hidden">Живой пример</h2>
     <div class="example__content container">
       <div class="example__splitter">
-          <p class="example__title style-title">Живой пример</p>
-          <p class="example__subtitle">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в
-            день.
-          </p>
-          <div class="example__splitter-coast">
-            <div class="example__wrapper">
-              <dl class="example__column">
-                <div class="example__parameters">
-                  <dt class="example__value">5 кг</dt>
-                  <dd class="example__sub">Снижение веса</dd>
-                </div>
-                <div class="example__parameters">
-                  <dt class="example__value">60 дней</dt>
-                  <dd class="example__sub">затрачено времени</dd>
-                </div>
-              </dl>
-            </div>
-            <p class="example__cost"><span class="example__cost-span">Затраты на питание:</span><br class="example__cost--br"> 15 000 руб.</p>
+        <p class="example__title style-title">Живой пример</p>
+        <p class="example__subtitle">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в
+          день.
+        </p>
+        <div class="example__splitter-coast">
+          <div class="example__wrapper">
+            <dl class="example__column">
+              <div class="example__parameters">
+                <dt class="example__value">5 кг</dt>
+                <dd class="example__sub">Снижение веса</dd>
+              </div>
+              <div class="example__parameters">
+                <dt class="example__value">60 дней</dt>
+                <dd class="example__sub">затрачено времени</dd>
+              </div>
+            </dl>
           </div>
+          <p class="example__cost"><span class="example__cost-span">Затраты на питание:</span><br class="example__cost--br"> 15 000 руб.</p>
         </div>
+      </div>
 
       <div class="example__splitter-additional">
         <div class="example__img">
           <picture>
-<!--            <source media="(min-width)">-->
-          <img class="example__img example__img--before example__img--active" src="img/cat-fat.png" alt="Пример кота до применения программы">
+            <source media="min-width: 768px"
+                    srcset="img/index/tablet/1x/t-cat-big.png 1x, img/index/tablet/2x/t-cat-big2x.png 2x">
+            <img class="example__img-big example__img-active" src="img/index/mobile/1x/cat-big.png" srcset="img/index/mobile/2x/cat-big2x.png 2x" alt="Пример кота после применения программы">
           </picture>
-          <img class="example__img example__img--after " src="img/cat-skinny.png" width="251" height="240" alt="Пример кота после применения программы">
+
+          <picture>
+            <source media="min-width: 768px"
+                    srcset="img/index/tablet/1x/t-cat-slim.png 1x, img/index/tablet/2x/t-cat-slim2x.png 2x">
+            <img class="example__img-slim " src="img/index/mobile/1x/cat-slim.png" alt="Пример кота до применения программы">
+          </picture>
         </div>
         <div class="example__buttons">
           <button class="example__button example__button--before">Было</button>
           <button class="example__button  example__button--after">Стало</button>
         </div>
+        <div class="example__range-controls">
+          <div class="example__bar"></div>
+        </div>
+        <div class="example__toggle example__toggle--min"></div>
+        <div class="example__toggle example__toggle--max"></div>
       </div>
+    </div>
 
     </div>
   </section>

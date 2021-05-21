@@ -47,92 +47,17 @@
   display: flex;
   position: relative;
   margin: 0 auto;
-
-  @media (max-width: $mobile-width-only) {
-    max-width: 217px;
-    justify-content: space-between;
-  }
-
-  &::after {
-    @media (max-width: $mobile-width-only) {
-      content: "";
-      display: block;
-      width: 85px;
-      height: 15px;
-      border: 1px solid $special-gray;
-      border-radius: 10px;
-      position: absolute;
-      top: 3px;
-      right: 70px;
-      background-color: $white;
-    }
-  }
+  justify-content: space-between;
 }
 
-.example__button--before {
-  &::after {
-    @media (max-width: $mobile-width-only) {
-      content: "";
-      position: absolute;
-      width: 35px;
-      height: 7px;
-      background-color: $basic-green;
-      left: 70px;
-      top: 7px;
-      z-index: 2;
-      border-radius: 10px;
-    }
-  }
+.example__img-big,
+.example__img-slim {
+  display: none;
 }
 
-.example__button--after {
-  &::before {
-    @media (max-width: $mobile-width-only) {
-      content: "";
-      position: absolute;
-      width: 35px;
-      height: 7px;
-      background-color: $basic-green;
-      right: 77px;
-      top: 7px;
-      z-index: 2;
-      border-radius: 10px;
-    }
-  }
+.example__img-active {
+  display: block;
 }
-
-
-//.example__about {
-//  @media (min-width: $desktop-width) {
-//    display: flex;
-//  }
-//}
-
-
-//  grid-template-areas: "example__title example__title"
-//    "example__subtitle example__subtitle"
-//    "example__column example__column"
-//    "example__cost example__cost"
-//    "example__img example__img";
-//
-//  @media (min-width: $tablet-width) {
-//    grid-template-areas: "example__title example__title"
-//      "example__subtitle example__subtitle"
-//      "example__column example__cost "
-//      "example__img example__img";
-//    background-image: linear-gradient(to top, $background-gray 30%, $white 30%);
-//  }
-//
-//  @media (min-width: $desktop-width) {
-//    grid-template-areas: "example__title example__img"
-//      "example__subtitle example__img"
-//      "example__column example__img"
-//      "example__cost .";
-//    grid-template-columns: 436px 1fr;
-//    grid-column-gap: 134px;
-//    background-image: linear-gradient(to top, $background-gray 70%, $white 30%);
-//  }
-//}
 
 .example__subtitle {
   margin: 0;
