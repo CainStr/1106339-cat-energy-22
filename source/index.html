@@ -12,16 +12,17 @@
 
 <header class="main-header main-header--background">
   <div class="main-header__container container">
-    <div class="main-logo">
-      <a class="page__img" href="#">
-        <picture>
-          <img src="img/index/mobile/1x/logo-header.png" width="34" height="38" alt="Логотип «Cat energy»">
-        </picture>
-      </a>
-      <a class="page__img-text" href="#"><img src="img/index/mobile/m-text-logo.svg" width="101" height="18" alt="Текстовый логотип школы «HTML Academy»"></a>
-    </div>
+    <a class="page__img" href="#">
+      <picture>
+        <source media="(min-width:1440px)"
+                srcset="img/index/desktop/svg/d-logo-header.svg">
+        <source media="(min-width:768px"
+                srcset="img/index/tablet/logo-header.svg">
+        <img src="img/index/mobile/m-logo-header.svg" alt="Логотип «Cat energy»">
+      </picture>
+    </a>
     <nav class="navigation">
-      <ul class="navigation__list list">
+      <ul class="navigation__list navigation__list--color list">
         <li><a>Главная</a></li>
         <li><a href="catalog.html">Каталог продукции</a></li>
         <li><a href="form.html">Подбор программы</a></li>
@@ -36,12 +37,14 @@
     <div class="program-selection__container container">
       <h2 class="visually-hidden">Блок выбора программы</h2>
       <p class="program-selection__title">Функциональное питание для котов</p>
-      <p class="program-selection__subtitle">занялся собой?займись котом!</p>
-      <picture class="program-selection__img">
-        <source media="min-width: 768px"
+      <p class="program-selection__subtitle">занялся собой? Займись котом!</p>
+      <picture>
+        <source media="(min-width: 1440px)"
+                srcset="img/index/desktop/1x/d-promo-logo.png 1x, img/index/desktop/2x/d-promo-logo2x.png 2x">
+        <source media="(min-width: 768px)"
                 srcset="img/index/tablet/1x/t-promo-logo.png 1x, img/index/tablet/2x/t-promo-logo2x.png 2x">
-        <img src="img/index/mobile/1x/promo-logo.png"
-                srcset="img/index/mobile/2x/promo-mobile2x.png 2x" width="280" height="270" alt="Упаковка питания «Cat energy курица»">
+        <img class="program-selection__img" src="img/index/mobile/1x/promo-logo.png"
+                srcset="img/index/mobile/2x/promo-mobile2x.png 2x" alt="Упаковка питания «Cat energy курица»">
       </picture>
       <a href="form.html" class="button button--primary program-selection__button">Подобрать программу</a>
     </div>
@@ -68,7 +71,7 @@
   </section>
 
   <section class="how-it-works container">
-    <h2 class="how-it-works__title style-title">Как это работает</h2>
+    <h2 class="how-it-works__title ">Как это работает</h2>
     <ol class="how-it-works__list list">
       <li class="how-it-works__item how-it-works__item--functional-nutrition how-it-works__item-pic">
         <span class="how-it-works__item-text">
@@ -78,10 +81,10 @@
         </span>
       </li>
       <li class="how-it-works__item how-it-works__item--consistency how-it-works__item-pic">
-        <span class="how-it-works__item-text"> Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</span>
+        <span class="how-it-works__item-text "> Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</span>
       </li>
       <li class="how-it-works__item how-it-works__item--meal-replacement how-it-works__item-pic">
-        <span class="how-it-works__item-text"> Замените один-два приема обычной еды на наше функциональное питание.</span>
+        <span class="how-it-works__item-text"> Замните один-два приема обычной еды на наше функциональное питание.</span>
       </li>
       <li class="how-it-works__item how-it-works__item--transformations how-it-works__item-pic">
         <span class="how-it-works__item-text"> Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
@@ -93,15 +96,16 @@
   <section class="example ">
     <h2 class="visually-hidden">Живой пример</h2>
     <div class="example__content container">
-      <div class="example__splitter">
-        <p class="example__title style-title">Живой пример</p>
+      <div class="example__meta">
+        <p class="example__title">Живой пример</p>
         <p class="example__subtitle">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
           Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в
           день.
         </p>
-        <div class="example__splitter-coast">
+
+        <div class="example__tablet-flex">
           <div class="example__wrapper">
-            <dl class="example__column">
+            <dl class="example__results">
               <div class="example__parameters">
                 <dt class="example__value">5 кг</dt>
                 <dd class="example__sub">Снижение веса</dd>
@@ -112,33 +116,42 @@
               </div>
             </dl>
           </div>
-          <p class="example__cost"><span class="example__cost-span">Затраты на питание:</span><br class="example__cost--br"> 15 000 руб.</p>
+          <p class="example__cost">
+            <span class="example__cost-span">Затраты на питание:</span>
+            <br class="example__cost--br"> 15 000 руб.
+          </p>
         </div>
       </div>
-
       <div class="example__splitter-additional">
         <div class="example__img">
+          <div class="example__crop">
+            <picture>
+              <source media="(min-width: 768px)"
+                      srcset="img/index/tablet/1x/t-cat-big.png 1x, img/index/tablet/2x/t-cat-big2x.png 2x">
+              <img class="example__img-big example__img-active"
+                      src="img/index/mobile/1x/cat-big.png"
+                      srcset="img/index/mobile/2x/cat-big2x.png 2x"
+                      alt="Пример кота после применения программы">
+            </picture>
+          </div>
           <picture>
-            <source media="min-width: 768px"
-                    srcset="img/index/tablet/1x/t-cat-big.png 1x, img/index/tablet/2x/t-cat-big2x.png 2x">
-            <img class="example__img-big example__img-active" src="img/index/mobile/1x/cat-big.png" srcset="img/index/mobile/2x/cat-big2x.png 2x" alt="Пример кота после применения программы">
-          </picture>
-
-          <picture>
-            <source media="min-width: 768px"
+            <source media="(min-width: 768px)"
                     srcset="img/index/tablet/1x/t-cat-slim.png 1x, img/index/tablet/2x/t-cat-slim2x.png 2x">
-            <img class="example__img-slim " src="img/index/mobile/1x/cat-slim.png" alt="Пример кота до применения программы">
+            <img class="example__img-slim "
+                    src="img/index/mobile/1x/cat-slim.png"
+                    alt="Пример кота до применения программы">
           </picture>
         </div>
         <div class="example__buttons">
           <button class="example__button example__button--before">Было</button>
+          <div class="example__scale">
+            <div class="example__bar">
+              <button class="example__thumb" type="button"></button>
+            </div>
+          </div>
           <button class="example__button  example__button--after">Стало</button>
         </div>
-        <div class="example__range-controls">
-          <div class="example__bar"></div>
-        </div>
-        <div class="example__toggle example__toggle--min"></div>
-        <div class="example__toggle example__toggle--max"></div>
+
       </div>
     </div>
 

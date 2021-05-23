@@ -1,3 +1,10 @@
+
+.navigation {
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+}
+
 .navigation__list a {
   @include oswald(20px, 20px, 500);
   text-transform: uppercase;
@@ -15,12 +22,13 @@
 
   @media (min-width: $desktop-width) {
     @include oswald(20px, 30px);
-    color: $white;
   }
+}
 
-  //&::before {
-  //
-  //}
+.navigation__list--color a {
+  @media (min-width: $desktop-width) {
+    color: white;
+  }
 }
 
 //.navigation__list a::before {
@@ -55,9 +63,9 @@
     margin-left: 95px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin-top: 42px;
-  }
+  //@media (min-width: $desktop-width) {
+  //  margin-top: 42px;
+  //}
 }
 
 .navigation__list li:not(:first-child) {

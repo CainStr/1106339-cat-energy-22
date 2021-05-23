@@ -45,5 +45,11 @@
 .main-header__container {
   @media (min-width: $tablet-width) {
     display: flex;
+    align-items: center;
+    padding-top: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 53px;
   }
 }
