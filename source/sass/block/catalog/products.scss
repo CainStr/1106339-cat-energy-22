@@ -1,3 +1,9 @@
+.products__catalog-items {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 68px;
+  }
+}
+
 .products__list {
   display: grid;
 
@@ -5,6 +11,7 @@
     grid-template-columns: repeat(auto-fill, 324px);
     //grid-template-rows: repeat(auto-fill, min(430px));
     grid-gap: 60px;
+    grid-row-gap: 80px;
     align-content: end;
     padding-top: 30px;
   }
@@ -41,7 +48,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 30px 35px  40px 40px;
+    padding: 30px 35px 40px 40px;
   }
 }
 
@@ -112,6 +119,7 @@
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $special-gray;
     padding-bottom: 14px;
+    margin-bottom: 14px;
     align-content: end;
   }
 }
@@ -119,6 +127,10 @@
 .products__catalog-title {
   @include oswald(36px, 36px);
   color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(60px, 60px);
+  }
 }
 
 .products__list-title {
@@ -131,15 +143,19 @@
   @media (max-width: $mobile-width-only) {
     grid-area: products__list-title;
     padding-bottom: 14px;
-    display: block;
-    width: 80px;
-    margin-right: auto;
+    padding-right: 60px;
+    display: flex;
+    justify-content: start;
     text-align: start;
   }
 
   @media (min-width: $tablet-width) {
     @include oswald(20px, 24px);
-    padding: 0 12px 21px;
+    padding: 0 52px 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 17px 21px;
   }
 }
 
@@ -166,6 +182,10 @@
   display: flex;
   //width: 100%;
 
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 15px;
+  }
+
   @media (min-width: $tablet-width) {
     margin-left: auto;
   }
@@ -184,10 +204,20 @@
 .products__additional-title {
   grid-area: products__additional-title;
   font-weight: inherit;
+  margin: 0;
+
+  @media (max-width: $mobile-width-only) {
+    @include oswald(24px, 24px);
+    padding-bottom: 36px;
+    margin-bottom: 13px;
+    border-bottom: 1px solid $special-gray;
+  }
 
   @media (min-width: $tablet-width) {
+    @include oswald(36px, 36px);
     background-color: $white;
-    width: 230px;
+    padding-bottom: 80px;
+    //width: 230px;
   }
 }
 
@@ -225,9 +255,17 @@
   font-weight: inherit;
   text-transform: uppercase;
   color: $special-medium-dark-grey-light;
+  margin: 0;
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 13px;
+  }
 
   @media (min-width: $tablet-width) {
     grid-area: products__additional-subtitle;
+
+    @include oswald(20px, 20px);
+    //padding-bottom: ;
     margin-top: 0;
   }
 }
@@ -235,8 +273,13 @@
 .products__additional-gift {
   grid-area: products__additional-gift;
   background-image: url("../img/products__additional-gift.jpg");
-  min-height: 200px;
+  background-repeat: no-repeat;
 
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 100px;
+    margin-top: 39px;
+  }
 
   @media (min-width: $tablet-width) {
     background-repeat: no-repeat;
@@ -245,6 +288,10 @@
     background-position: 90%;
     margin-top: 30px;
     justify-items: right;
+    margin-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
   }
 
   @media (min-width: $desktop-width) {
@@ -257,11 +304,15 @@
 
 .products__additional-gift-title {
   @include arial(16px, 20px);
-  font-weight: initial;
+  font-weight: inherit;
   color: $white;
   position: relative;
-  padding-top: 100px;
   text-align: center;
+  margin: 0;
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 186px;
+  }
 
   @media (min-width: $tablet-width) {
     text-align: start;
@@ -282,15 +333,16 @@
 .products__additional-gift-title::before {
   position: absolute;
   content: url("../img/products__additional-gift-title.svg");
+  margin: 0;
 
   @media (max-width: $mobile-width-only) {
-    top: 10px;
+    top: 56px;
     left: 101px;
   }
 
   @media (min-width: $tablet-width) {
-    left: -406px;
-    top: 25%;
+    left: -380px;
+    top: -5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -351,9 +403,24 @@
   @media (min-width: $tablet-width) {
     grid-template-rows: repeat(3, auto);
     border: $line-gray-contacts;
+
     background-image: none;
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 326px;
+    height: 100px;
+    position: absolute;
+    background-color: $white;
+    top: -30px;
+    left: -2px;
+    border-bottom: $line-gray-contacts;
   }
 }
+
 
 .products__list-title--additional {
   grid-area: products__list-title--additional;
@@ -363,7 +430,10 @@
 
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 30px;
+    padding-top: 50px;
+    padding-bottom: 8px;
+    text-align: center;
+    margin: 0;
   }
 
   @media (min-width: $tablet-width) {
@@ -376,13 +446,13 @@
   position: absolute;
 
   @media (max-width: $mobile-width-only) {
-    content: url("../img/products__list-title--additional.svg");
+    content: url("../img/index/mini-plus.svg");
     top: -10px;
     left: 125px;
   }
 
   @media (min-width: $tablet-width) {
-    content: url("../img/big-products__list-title--additional.svg");
+    content: url("../img/index/plus.svg");
     top: 52px;
     right: 40%;
   }
@@ -394,13 +464,17 @@
 
 .products__list-subtitle--additional {
   grid-area: products__list-subtitle--additional;
+  margin: 0;
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 21px;
+  }
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 87px;
+    @include arial(16px, 18px);
     width: 167px;
     justify-self: center;
     display: block;
-    margin-bottom: 0;
   }
 }
 
@@ -411,9 +485,14 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  margin: 0;
 
   @include oswald(16px, 20px);
   text-transform: uppercase;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 25px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 168px;
@@ -422,13 +501,19 @@
 
 .products__additional-item {
   border-bottom: $line-gray-contacts;
-  padding-bottom: 30px;
+
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+  }
 
   @media (min-width: $tablet-width) {
     grid-area: products__additional-item;
     display: grid;
     grid-template-areas: "products__additional-subtitle products__additional-specifications" "products__button-width products__button-width";
     padding: 26px 38px 28px 38px;
+    grid-row-gap: 27px;
     border-left: $line-gray-contacts;
     border-right: $line-gray-contacts;
   }

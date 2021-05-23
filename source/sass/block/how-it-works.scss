@@ -10,6 +10,7 @@
 
 .how-it-works__title {
   @media (max-width: $mobile-width-only) {
+    @include oswald(36px, 40px);
     padding-bottom: 38px;
   }
 

@@ -15,6 +15,10 @@
     padding-bottom: 526px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-bottom: 282px;
+  }
+
   &__title {
     @include oswald(36px, 36px);
     padding-top: 27px;
