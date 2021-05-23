@@ -9,28 +9,34 @@
   font-family: "Oswald", "Arial", "Verdana", sans-serif;
 }
 
-.page__img-text {
-  grid-area: main__img-text;
-  display: flex;
-
-
+.page__img {
   @media (max-width: $mobile-width-only) {
-    position: relative;
-    width: 100%;
-    //justify-content: center;
-    padding-left: 60px;
-  }
-
-
-  @media (min-width: $tablet-width) {
-    margin-left: 12px;
+    width: 190px;
+    display: block;
+    align-items: center;
   }
 }
 
-.page__img-text::after {
-  @media (max-width: $mobile-width-only) {
-    content: url("../img/main-header__menu.svg");
-    position: absolute;
-    right: 0;
-  }
-}
+//.page__img-text {
+//  grid-area: main__img-text;
+//  display: flex;
+//
+//
+//  @media (max-width: $mobile-width-only) {
+//    position: relative;
+//    padding-left: 60px;
+//  }
+//
+//
+//  @media (min-width: $tablet-width) {
+//    display: none;
+//  }
+//}
+
+//.page__img-text::after {
+//  @media (max-width: $mobile-width-only) {
+//    content: url("../img/main-header__menu.svg");
+//    position: absolute;
+//    right: 0;
+//  }
+//}

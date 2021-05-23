@@ -8,5 +8,5 @@
 @mixin arial($fs: 14px, $lh: 18px) {
   font-size: $fs;
   line-height: $lh;
-  font-family: "Arial", "Oswald", "Verdana", sans-serif;
+  font-family: "Arial", sans-serif;
 }
