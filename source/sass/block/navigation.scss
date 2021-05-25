@@ -1,5 +1,16 @@
 
 .navigation {
+  &__border {
+    border-bottom: 2px solid $basic-green;
+    padding-bottom: 8px;
+  }
+
+  &__border--white {
+    @media (min-width: $desktop-width) {
+      border-bottom: 2px solid $white;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     margin-left: auto;
   }
@@ -11,7 +22,7 @@
 
   @media (max-width: $mobile-width-only) {
     display: flex;
-    padding: 22px 15px 24px;
+    padding: 18px 15px 24px;
     justify-content: center;
     border-bottom: 1px solid $basic-gray;
   }
@@ -60,7 +71,7 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    margin-left: 95px;
+    margin-left: 91px;
   }
 
   //@media (min-width: $desktop-width) {

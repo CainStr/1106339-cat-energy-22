@@ -1,26 +1,31 @@
 .programs__list {
-  margin-bottom: 27px;
+  padding-bottom: 45px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 71px;
+  }
 }
 
 .programs__item {
   background-color: $basic-gray;
 
   @media (max-width: $mobile-width-only) {
-    padding: 21px 22px;
+    padding: 21px 20px;
   }
 
   @media (min-width: $tablet-width) {
     display: block;
-    padding: 77px 280px 59px 52px;
+    padding: 77px 280px 57px 52px;
     position: relative;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 77px 51px 33px 52px;
+    padding: 77px 51px 59px 52px;
     display: block;
     max-width: 570px;
   }
 }
+
 
 .programs__item:not(:last-child) {
   @media (max-width: $mobile-width-only) {
@@ -35,20 +40,6 @@
     margin-bottom: 0;
   }
 }
-
-
-//.programs__title--cat-sit::after {
-//  @media (min-width: $tablet-width) {
-//    content: url("../img/programs__title--cat-sit.svg");
-//    position: absolute;
-//    right: 0;
-//  }
-//
-//  @media (min-width: $desktop-width) {
-//    display: none;
-//  }
-//}
-
 
 @media (min-width: $desktop-width) {
   .programs__list {
@@ -66,15 +57,19 @@
   text-align: center;
 
   @media (max-width: $mobile-width-only) {
-    padding-left: 78px;
+    @include oswald(24px, 37px);
+    text-transform: uppercase;
+    padding-left: 72px;
     text-align: left;
     padding-bottom: 29px;
+    padding-top: 7px;
   }
 
   @media (min-width: $tablet-width) {
     @include oswald(36px, 36px);
     text-transform: uppercase;
     text-align: left;
+    padding-bottom: 25px;
   }
 
   @media (min-width: $desktop-width) {
@@ -92,7 +87,11 @@
   background-size: 50px 50px;
   width: 50px;
   height: 50px;
-  left: 0;
+  left: 2px;
+
+  @media (max-width: $mobile-width-only) {
+    top: 0;
+  }
 
   @media (min-width: $desktop-width) {
     background-size: 100px 100px;
@@ -107,6 +106,10 @@
   width: 67px;
   height: 50px;
   left: -7px;
+
+  @media (max-width: $mobile-width-only) {
+    top: 1px;
+  }
 
   @media (min-width: $desktop-width) {
     background-size: 134px 100px;
@@ -132,11 +135,11 @@
 
 .programs__title--cat-sit::after {
   background-image: url("../img/index/mobile/svg/cat-sit.svg");
-  background-size: 200px 200px;
+  background-size: 200px 211px;
   width: 200px;
-  height: 200px;
-  right: -230px;
-  top: -30px;
+  height: 211px;
+  right: -218px;
+  top: 4px;
 }
 
 .programs__title--cat-goes::after {
@@ -144,8 +147,8 @@
   background-size: 268px 200px;
   width: 268px;
   height: 200px;
-  right: -260px;
-  top: -30px;
+  right: -251px;
+  top: 14px;
 }
 
 
@@ -167,36 +170,57 @@
 .programs__subtitle {
   @include arial;
   color: $special-medium-dark-grey;
+  margin: 0;
 
   @media (max-width: $mobile-width-only) {
-    margin: 0;
     padding-bottom: 23px;
     border-bottom: 1px solid $color-line-gray;
-    max-width: calc(100% - 40px);
+    max-width: 227px;
   }
 
   @media (min-width: $tablet-width) {
     @include arial(16px, 24px);
+    display: block;
+    min-height: 147px;
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 0;
+    padding-bottom: 27px;
   }
 }
 
 .programs__button {
   display: inline-block;
-  padding-top: 15px;
-  padding-right: 50px;
+
   position: relative;
+  text-transform: uppercase;
+
+  @media (max-width: $mobile-width-only) {
+    @include oswald(16px, 16px);
+    padding-top: 18px;
+    padding-right: 50px;
+  }
 
   @media (min-width: $tablet-width) {
     @include oswald(20px, 30px);
-    text-transform: uppercase;
   }
 }
 
 .programs__button::after {
   content: url("../img/index/arrow.svg");
-  margin-left: 15px;
   position: absolute;
-  top: 15px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 8px;
+    top: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 17px;
+    top: -3px;
+  }
 }
 
 .programs__button::before {
