@@ -4,20 +4,26 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 90px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 49px;
   }
 }
 
 .how-it-works__title {
+  margin: 0;
+
   @media (max-width: $mobile-width-only) {
     @include oswald(36px, 40px);
-    padding-bottom: 38px;
+    padding-bottom: 40px;
   }
 
   @media (min-width: $tablet-width) {
     @include oswald(60px, 60px);
     margin: 0;
-    padding-bottom: 32px;
+    padding-bottom: 43px;
   }
 }
 
@@ -27,10 +33,15 @@
   display: flex;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
   &::before {
+    background-color: $basic-green;
+
     @media (max-width: $mobile-width-only) {
       content: "";
-      background-color: $basic-green;
       width: 60px;
       height: 60px;
       position: absolute;
@@ -39,6 +50,10 @@
     @media (min-width: $tablet-width) {
       width: 80px;
       height: 80px;
+      position: absolute;
+      align-items: center;
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -65,19 +80,15 @@
 }
 
 .how-it-works__item-text {
-  padding-left: 20px;
-
   @media (max-width: $mobile-width-only) {
-    padding-bottom: 24px;
+    padding-bottom: 26px;
     padding-left: 80px;
   }
 
   @media (min-width: $tablet-width) {
-    @media (min-width: $tablet-width) {
-      @include arial(16px, 24px);
-    }
+    @include arial(16px, 24px);
     margin-left: 0;
-    margin-top: 91px;
+    padding-top: 112px;
     position: absolute;
     display: block;
     width: 227px;
@@ -87,22 +98,20 @@
 .how-it-works__list {
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 220px);
-    grid-template-rows: repeat(2, min-content);
-    grid-column-gap: 137px;
-    grid-rows-gap: 37px;
+    grid-template-columns: repeat(auto-fill, 246px);
+    grid-column-gap: 138px;
+    grid-row-gap: 27px;
     counter-reset: numbers-pic;
     position: relative;
   }
 
   @media (min-width: $desktop-width) {
     grid-column-gap: 97px;
+    grid-template-columns: repeat(auto-fill, 228px);
   }
 }
 
 .how-it-works__item::after {
-  //ругается линтер , пишет не может найти шрифт
-  //font-family: "Oswald";
   font-size: 280px;
   line-height: 280px;
 

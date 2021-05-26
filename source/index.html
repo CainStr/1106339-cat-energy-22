@@ -5,12 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Здоровое питание для вашего питомца: интернет-магазин «Cat-energy»</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <!--  <link href="css/style.css" rel="stylesheet">-->
 </head>
 
 <body class="page">
 
-<header class="main-header main-header--background">
+<header class="main-header main-header--background main-header--desktop">
   <div class="main-header__container container">
     <a class="page__img" href="#">
       <picture>
@@ -23,7 +24,7 @@
     </a>
     <nav class="navigation">
       <ul class="navigation__list navigation__list--color list">
-        <li><a>Главная</a></li>
+        <li><a class="navigation__border navigation__border--white">Главная</a></li>
         <li><a href="catalog.html">Каталог продукции</a></li>
         <li><a href="form.html">Подбор программы</a></li>
       </ul>
@@ -31,9 +32,9 @@
   </div>
 </header>
 
-<main class="content ">
+<main class="content">
   <h1 class="visually-hidden">Магазин «Cat-energy»</h1>
-  <section class="program-selection">
+  <section class="program-selection ">
     <div class="program-selection__container container">
       <h2 class="visually-hidden">Блок выбора программы</h2>
       <p class="program-selection__title">Функциональное питание для котов</p>
@@ -62,7 +63,7 @@
       </li>
       <li class="programs__item ">
         <p class="programs__title programs__title--cat-goes">Набор массы</p>
-        <p class="programs__subtitle">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
+        <p class="programs__subtitle">Заработать авторитет среди дворовых котов <br> и даже собак? Серия Cat Energy Pro
           поможет вашему коту нарастить необходимые мышцы!
         </p>
         <a class="programs__button" href="#">Каталог pro</a>
@@ -124,23 +125,25 @@
       </div>
       <div class="example__splitter-additional">
         <div class="example__img">
-          <div class="example__crop">
-            <picture>
-              <source media="(min-width: 768px)"
-                      srcset="img/index/tablet/1x/t-cat-big.png 1x, img/index/tablet/2x/t-cat-big2x.png 2x">
-              <img class="example__img-big example__img-active"
-                      src="img/index/mobile/1x/cat-big.png"
-                      srcset="img/index/mobile/2x/cat-big2x.png 2x"
-                      alt="Пример кота после применения программы">
-            </picture>
+          <div class="example__before ">
+                        <picture class="example__mob example__img-active">
+                          <source media="(min-width: 768px)"
+                                  srcset="img/index/tablet/1x/t-cat-big.png 1x, img/index/tablet/2x/t-cat-big2x.png 2x">
+                          <img
+                                  src="img/index/mobile/1x/cat-big.png"
+                                  srcset="img/index/mobile/2x/cat-big2x.png 2x"
+                                  alt="Пример кота после применения программы">
+                        </picture>
           </div>
-          <picture>
-            <source media="(min-width: 768px)"
-                    srcset="img/index/tablet/1x/t-cat-slim.png 1x, img/index/tablet/2x/t-cat-slim2x.png 2x">
-            <img class="example__img-slim "
-                    src="img/index/mobile/1x/cat-slim.png"
-                    alt="Пример кота до применения программы">
-          </picture>
+          <div class="example__after ">
+                      <picture class="example__mob">
+                        <source media="(min-width: 768px)"
+                                srcset="img/index/tablet/1x/t-cat-slim.png 1x, img/index/tablet/2x/t-cat-slim2x.png 2x">
+                        <img class="example__img-slim "
+                                src="img/index/mobile/1x/cat-slim.png"
+                                alt="Пример кота до применения программы">
+                      </picture>
+          </div>
         </div>
         <div class="example__buttons">
           <button class="example__button example__button--before">Было</button>
@@ -150,17 +153,17 @@
             </div>
           </div>
           <button class="example__button  example__button--after">Стало</button>
-        </div>
+          <!--        </div>-->
 
+        </div>
       </div>
-    </div>
 
     </div>
   </section>
   <section class="about-us about-us--white">
     <h2 class="visually-hidden">Расположение и номер телефона магазина «Cat energy»</h2>
     <div class="about-us__wrapper  container">
-      <p class="about-us__title">приглашаем
+      <p class="about-us__title">приглашаем <br>
         к сотрудничеству дилеров!
       </p>
       <address class="about-us__address"> <span class="about-us__address-br">ул. Большая
@@ -178,15 +181,37 @@
 
 <footer class="main-footer ">
   <div class="main-footer__content container">
-    <a class="page__img-text" href="#"><img class="page__footer-logo  " src="img/page__img-text.svg" width="128" height="24" alt="Текстовый логотип магазина «Cat-energy»">
+    <a class="page__img-text" href="#"><img class="page__footer-logo" src="img/page__img-text.svg" width="128" height="24" alt="Текстовый логотип магазина «Cat-energy»">
     </a>
     <ul class="social list">
-      <li><a class="social__item--vk social__item" aria-label="Ссылка на страницу «Вконтакте»" href="#"></a></li>
-      <li><a class="social__item--instagram social__item" aria-label="Ссылка на страницу «Instagram»" href="#"></a></li>
-      <li><a class="social__item--facebook social__item" aria-label="Ссылка на страницу «Facebook»" href="#"></a></li>
+      <li class="social__item">
+        <a class="social__link--vk social__link" aria-label="Ссылка на страницу «Вконтакте»" href="#">
+          <svg >
+            <use xlink:href="img/sprite.svg#vkontakte"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link--instagram social__link" aria-label="Ссылка на страницу «Instagram»" href="#">
+          <svg >
+            <use xlink:href="img/sprite.svg#instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link--facebook social__link" aria-label="Ссылка на страницу «Facebook»" href="#">
+          <svg>
+            <use xlink:href="img/sprite.svg#facebook"></use>
+          </svg>
+        </a>
+      </li>
     </ul>
-    <a class="academy-text-logo" href="#"><img src="img/academy-2.svg" alt="Текстовый логотип школы «HTML-Academy»"></a>
-    <a class="academy-logo" href="#"><img src="img/academy-logo.svg" width="34" height="38" alt="Логотип «HTML-Academy»"></a>
+    <a class="academy-text-logo " href="#"><img src="img/text-logo.svg" alt="Текстовый логотип школы «HTML-Academy»"></a>
+    <a class="academy-logo" href="#">
+      <svg width="27px" height="34px">
+        <use xlink:href="img/sprite.svg#academy-logo"></use>
+      </svg>
+    </a>
   </div>
 </footer>
 </body>

@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Анкета для подбора питания вашему питомцу: интернет-магазин «Cat-energy»</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page">
 
-<header class="main-header">
+<header class="main-header main-header__desktop">
   <div class="main-header__container container">
     <a class="page__img" href="#">
       <picture>
@@ -25,18 +25,18 @@
       <ul class="navigation__list  list">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог продукции</a></li>
-        <li><a href="form.html">Подбор программы</a></li>
+        <li><a class="navigation__border" href="form.html">Подбор программы</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main class="content selection-questionnaire placeholder-style ">
+<main class="content selection-questionnaire content--overflow">
   <h1 class="visually-hidden">Анкета подбора программы для питомца</h1>
 
     <section class="person-parameters person-parameters--wrapper  container">
       <h2 class="person-parameters__title">Подбор программы</h2>
-      <p class="person-parameters__subtitle">Заполните анкету, и мы поберем <br> программу питания для вашего кота</p>
+      <p class="person-parameters__subtitle">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
       <form class="form person-parameters__form" method="post" action="https://echo.htmlacademy.ru">
         <div class="form__container">
           <fieldset class="form__item form__item--user">
@@ -65,7 +65,7 @@
                 <label class="form__purpose-label" for="weight-loss">похудение</label>
               </li>
               <li class="form__list-item  form__list-item--purpose">
-                <input class="form__purpose-radio" type="radio" value="weight-gain" name="radio-mass" id="weight-gain">
+                <input class="form__purpose-radio" type="radio" value="weight-gain" name="radio-mass" id="weight-gain" disabled>
                 <label class="form__purpose-label" for="weight-gain">набор массы</label>
               </li>
               <li class="form__list-item  form__list-item--purpose">
@@ -76,7 +76,10 @@
           </fieldset>
         </div>
         <fieldset class="form__item form__item--contacts">
-          <legend class="form__title form__title--contacts green-line green-line--contacts"> Контактные данные (владелец кота)</legend>
+          <legend class="form__title form__title--contacts line-green line-green--contacts">
+            Контактные данные
+            <span>(владельца кота)</span>
+          </legend>
           <ul class="form__list form__list--contacts list">
             <li class="form__list-item  form__list-item--contacts form__list-item--email">
               <label class="form__contacts-label form__label" for="person-email">E-mail:*</label>
@@ -87,14 +90,14 @@
               <input class="form__contacts-input form__input" type="tel" name="person-telephone" id="person-telephone" placeholder="8 (960) 900-60-90">
             </li>
             <li class="form__list-item form__list-item--contacts form__list-item--textarea">
-              <label class="form__title form__contacts-label form__label form__label--comment green-line" for="person-parameters__comment">Комментарий</label>
+              <label class="form__title form__contacts-label form__label form__label--comment line-green" for="person-parameters__comment">Комментарий</label>
               <textarea class="form__textarea" name="person-parameters__comment" placeholder="Расскажите обо всех повадках кота" id="person-parameters__comment"></textarea>
             </li>
           </ul>
         </fieldset>
 
         <fieldset class="form__item form__item--optional">
-          <legend class="form__title form__title--optional green-line">Дополнительно</legend>
+          <legend class="form__title form__title--optional line-green">Дополнительно</legend>
           <ul class="form__list form__list--optional list">
             <li class="form__list-item form__list-item--optional">
               <input class=" form__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
@@ -105,7 +108,7 @@
               <label class="form__label form__label-optional" for="drinking-water">питьевая вода</label>
             </li>
             <li class="form__list-item form__list-item--optional">
-              <input class=" form__checkbox" type="checkbox" name="milk" id="milk">
+              <input class=" form__checkbox" type="checkbox" name="milk" id="milk" disabled>
               <label class="form__label form__label-optional" for="milk">молоко</label>
             </li>
             <li class="form__list-item form__list-item--optional">
@@ -124,7 +127,7 @@
     <section class="about-us ">
       <h2 class="visually-hidden">Расположение и номер телефона магазина «Cat energy»</h2>
       <div class="about-us__wrapper container">
-        <p class="about-us__title">приглашаем
+        <p class="about-us__title">Приглашаем<br>
           к сотрудничеству дилеров!
         </p>
         <address class="about-us__address"> <span class="about-us__address-br">ул. Большая
@@ -153,6 +156,5 @@
     <a class="academy-logo" href="#"><img src="img/academy-logo.svg" width="34" height="38" alt="Логотип «HTML-Academy»"></a>
   </div>
 </footer>
-<script src="js/main.js"></script>
 </body>
 </html>
