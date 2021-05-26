@@ -13,12 +13,14 @@
     grid-template-areas: "main__img-text main__img-text"
       "social social"
       "academy-text-logo academy-logo";
+    align-items: center;
+    grid-row-gap: 50px;
   }
 
   @media (min-width: $tablet-width) {
-    grid-template-areas: "main__img-text social   academy-logo";
+    grid-template-areas: "main__img-text social  academy-text-logo academy-logo";
     align-items: center;
-    //padding: 0 0px 20px 20px;
+    padding: 50px 30px;
   }
 
   @media (min-width: $desktop-width) {

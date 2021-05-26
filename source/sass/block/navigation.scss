@@ -36,6 +36,14 @@
   }
 }
 
+.navigation__list a:hover {
+  opacity: 0.6;
+}
+
+.navigation__list a:active {
+  opacity: 0.3;
+}
+
 .navigation__list--color a {
   @media (min-width: $desktop-width) {
     color: white;

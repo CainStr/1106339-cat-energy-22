@@ -9,8 +9,12 @@
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
-    padding-bottom: 34px;
   }
+
+  //&--desktop {
+  //
+  //  padding-bottom: 30px;
+  //}
 }
 
 .main-header--background {
