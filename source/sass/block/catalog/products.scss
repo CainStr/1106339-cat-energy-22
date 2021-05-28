@@ -397,6 +397,7 @@
     align-items: end;
     background-position: 100%;
     margin-bottom: 0;
+    padding-bottom: 11px;
   }
 }
 
@@ -625,6 +626,16 @@
   @media (min-width: $desktop-width) {
     width: 168px;
   }
+}
+
+.products__button--additional:hover {
+  background-color: $additional;
+  color: $basic-black;
+}
+
+.products__button--additional:active {
+  opacity: 0.3;
+  color: $basic-black;
 }
 
 .products__additional-item {

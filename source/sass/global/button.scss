@@ -8,9 +8,9 @@
     display: block;
     padding: 10px 25px 7px;
 
-    @include oswald(14px, 18px);
+    @include oswald(16px, 18px);
     background-color: $basic-green;
-    color: rgba($white, 0.7);
+    color: $white;
     text-transform: uppercase;
   }
 }

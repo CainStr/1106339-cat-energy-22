@@ -84,6 +84,21 @@
 }
 
 .form__input:hover {
+  border-color: $special-gray;
+}
+
+.form__input:focus {
+  border-color: $basic-black;
+  outline: none;
+}
+
+.form__textarea:hover {
+  border-color: $special-gray;
+}
+
+.form__textarea:focus {
+  outline: none;
+
   border-color: $basic-black;
 }
 
