@@ -18,13 +18,13 @@
   }
 }
 
-.navigation::after {
+.navigation__list::after {
   @media (max-width: $mobile-width-only) {
     content: "";
     border-top: 1px solid $basic-gray;
-    width: 100%;
+    width: 200vw;
     position: absolute;
-    left: 0;
+    left: -100vw;
   }
 }
 
@@ -51,7 +51,7 @@
 .navigation__list a::after {
   @media (max-width: $mobile-width-only) {
     content: "";
-    width: 100%;
+    width: 100vw;
     position: absolute;
     border-bottom: 1px solid $basic-gray;
     margin-top: -23px;

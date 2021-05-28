@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Andrew Aleksandrovich](https://up.htmlacademy.ru/adaptive/22/user/1106339).
-* Наставник: [Андрей Корейкин](https://htmlacademy.ru/profile/ankormoreankor).
+* Студент: [Андрей Александрович](https://up.htmlacademy.ru/adaptive/22/user/1106339).
+* Наставник: [Алексей Хабиров](https://htmlacademy.ru/profile/alex_khab).
 
 ---
 
