@@ -3,4 +3,12 @@
   border: 0;
   margin-bottom: -3px;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 398px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 400px;
+  }
 }

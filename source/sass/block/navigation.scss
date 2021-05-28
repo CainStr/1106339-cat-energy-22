@@ -1,8 +1,10 @@
 
 .navigation {
   &__border {
-    border-bottom: 2px solid $basic-green;
-    padding-bottom: 8px;
+    @media (min-width: $tablet-width) {
+      border-bottom: 2px solid $basic-green;
+      padding-bottom: 8px;
+    }
   }
 
   &__border--white {
@@ -16,15 +18,25 @@
   }
 }
 
+.navigation::after {
+  @media (max-width: $mobile-width-only) {
+    content: "";
+    border-top: 1px solid $basic-gray;
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+}
+
+
 .navigation__list a {
   @include oswald(20px, 20px, 500);
   text-transform: uppercase;
 
   @media (max-width: $mobile-width-only) {
     display: flex;
-    padding: 18px 15px 24px;
+    padding: 18px 15px 26px;
     justify-content: center;
-    border-bottom: 1px solid $basic-gray;
   }
 
   @media (min-width: $tablet-width) {
@@ -35,6 +47,17 @@
     @include oswald(20px, 30px);
   }
 }
+
+.navigation__list a::after {
+  @media (max-width: $mobile-width-only) {
+    content: "";
+    width: 100%;
+    position: absolute;
+    border-bottom: 1px solid $basic-gray;
+    margin-top: -23px;
+  }
+}
+
 
 .navigation__list a:hover {
   opacity: 0.6;
@@ -66,10 +89,7 @@
 }
 
 .navigation__list {
-  //display: none;
-
   @media (max-width: $mobile-width-only) {
-
     justify-content: center;
     text-align: center;
     grid-row-gap: 46px;
@@ -81,10 +101,6 @@
     display: flex;
     margin-left: 91px;
   }
-
-  //@media (min-width: $desktop-width) {
-  //  margin-top: 42px;
-  //}
 }
 
 .navigation__list li:not(:first-child) {

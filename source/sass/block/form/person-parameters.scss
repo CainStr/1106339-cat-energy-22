@@ -1,6 +1,6 @@
 .person-parameters--wrapper {
   @media (max-width: $mobile-width-only) {
-    padding-bottom: 35px;
+    padding-bottom: 32px;
   }
 
   @media (min-width: $tablet-width) {
@@ -17,7 +17,7 @@
   padding: 0;
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 30px;
+    padding-top: 28px;
     padding-bottom: 36px;
 
     @include oswald(36px, 36px);
@@ -26,7 +26,7 @@
 
   @media (min-width: $tablet-width) {
     @include oswald(60px, 60px);
-    padding-top: 30px;
+    padding-top: 64px;
     padding-bottom: 51px;
     text-transform: none;
   }

@@ -1,5 +1,8 @@
 .academy-text-logo {
   grid-area: academy-text-logo;
   display: flex;
-  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
 }

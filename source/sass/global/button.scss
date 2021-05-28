@@ -3,7 +3,6 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
-  opacity: 0.7;
 
   &--primary {
     display: block;
@@ -11,15 +10,15 @@
 
     @include oswald(14px, 18px);
     background-color: $basic-green;
-    color: $white;
+    color: rgba($white, 0.7);
     text-transform: uppercase;
   }
 }
 
-.button:hover {
-  opacity: 1;
-}
+.button--primary:hover {
+  color: $white;
 
-.button:active {
-  opacity: 0.3;
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }

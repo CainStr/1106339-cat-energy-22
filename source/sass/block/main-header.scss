@@ -12,6 +12,19 @@
   }
 }
 
+.main-header__x {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    right: 24px;
+    top: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+
 .main-header--background {
   @media (min-width: $desktop-width) {
     position: relative;
@@ -42,6 +55,8 @@
 }
 
 .main-header__container {
+  position: relative;
+
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;

@@ -1,6 +1,6 @@
 .how-it-works {
   @media (max-width: $mobile-width-only) {
-    padding-bottom: 22px;
+    padding-bottom: 39px;
   }
 
   @media (min-width: $tablet-width) {
@@ -79,6 +79,16 @@
   }
 }
 
+.how-it-works__br {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
 .how-it-works__item-text {
   @media (max-width: $mobile-width-only) {
     padding-bottom: 26px;
@@ -91,7 +101,10 @@
     padding-top: 112px;
     position: absolute;
     display: block;
-    width: 227px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 246px;
   }
 }
 
@@ -112,16 +125,16 @@
 }
 
 .how-it-works__item::after {
-  font-size: 280px;
-  line-height: 280px;
-
   @media (min-width: $tablet-width) {
     content: counter(numbers-pic);
     counter-increment: numbers-pic;
     color: $basic-gray;
     z-index: -1;
-    top: -30px;
-    left: 70px;
+    top: -10px;
+    left: 114px;
     position: absolute;
+    font-family: "Oswald", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
   }
 }

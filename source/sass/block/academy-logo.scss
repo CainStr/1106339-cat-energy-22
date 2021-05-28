@@ -3,5 +3,22 @@
   display: grid;
   justify-content: end;
   align-items: center;
-  fill: #68b738;
+  fill: $special-medium-gray;
+
+  &:hover {
+    stroke: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 23px;
+    justify-content: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 22px;
+  }
 }
