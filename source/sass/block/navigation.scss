@@ -18,15 +18,15 @@
   }
 }
 
-.navigation__list::after {
-  @media (max-width: $mobile-width-only) {
-    content: "";
-    border-top: 1px solid $basic-gray;
-    width: 200vw;
-    position: absolute;
-    left: -100vw;
-  }
-}
+//.navigation__list::after {
+//  @media (max-width: $mobile-width-only) {
+//    content: "";
+//    border-top: 1px solid $basic-gray;
+//    width: 200vw;
+//    position: absolute;
+//    left: -100vw;
+//  }
+//}
 
 
 .navigation__list a {
